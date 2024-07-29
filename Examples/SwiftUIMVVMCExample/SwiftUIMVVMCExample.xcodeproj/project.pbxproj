@@ -7,19 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B275E7BE2C56799F000D3CB3 /* SwiftUIMVVMCExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B275E7BD2C56799F000D3CB3 /* SwiftUIMVVMCExampleApp.swift */; };
-		B275E7C02C56799F000D3CB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B275E7BF2C56799F000D3CB3 /* ContentView.swift */; };
+		B26D08F92C5791DD0094CBFB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F52C5791DD0094CBFB /* AppCoordinator.swift */; };
+		B26D08FA2C5791DE0094CBFB /* AppCoordinatorRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F62C5791DD0094CBFB /* AppCoordinatorRoute.swift */; };
+		B26D08FB2C5791DE0094CBFB /* SwiftUIMVVMCExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F72C5791DD0094CBFB /* SwiftUIMVVMCExampleApp.swift */; };
+		B26D08FC2C5791DE0094CBFB /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F82C5791DD0094CBFB /* AppViewModel.swift */; };
+		B26D09052C5791E80094CBFB /* HomeScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08FD2C5791E80094CBFB /* HomeScreenCoordinator.swift */; };
+		B26D09062C5791E80094CBFB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08FE2C5791E80094CBFB /* HomeScreenView.swift */; };
+		B26D09072C5791E80094CBFB /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08FF2C5791E80094CBFB /* HomeScreenViewModel.swift */; };
+		B26D09082C5791E80094CBFB /* LaunchScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D09012C5791E80094CBFB /* LaunchScreenCoordinator.swift */; };
+		B26D09092C5791E80094CBFB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D09022C5791E80094CBFB /* LaunchScreenView.swift */; };
+		B26D090A2C5791E80094CBFB /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D09032C5791E80094CBFB /* LaunchScreenViewModel.swift */; };
 		B275E7C22C5679A1000D3CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B275E7C12C5679A1000D3CB3 /* Assets.xcassets */; };
 		B275E7C52C5679A1000D3CB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B275E7C42C5679A1000D3CB3 /* Preview Assets.xcassets */; };
+		B28008072C57974D0035E429 /* SwiftUI_MVVMC in Frameworks */ = {isa = PBXBuildFile; productRef = B28008062C57974D0035E429 /* SwiftUI_MVVMC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B26D08F52C5791DD0094CBFB /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B26D08F62C5791DD0094CBFB /* AppCoordinatorRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorRoute.swift; sourceTree = "<group>"; };
+		B26D08F72C5791DD0094CBFB /* SwiftUIMVVMCExampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIMVVMCExampleApp.swift; sourceTree = "<group>"; };
+		B26D08F82C5791DD0094CBFB /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		B26D08FD2C5791E80094CBFB /* HomeScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenCoordinator.swift; sourceTree = "<group>"; };
+		B26D08FE2C5791E80094CBFB /* HomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		B26D08FF2C5791E80094CBFB /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		B26D09012C5791E80094CBFB /* LaunchScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenCoordinator.swift; sourceTree = "<group>"; };
+		B26D09022C5791E80094CBFB /* LaunchScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		B26D09032C5791E80094CBFB /* LaunchScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewModel.swift; sourceTree = "<group>"; };
 		B275E7BA2C56799F000D3CB3 /* SwiftUIMVVMCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMVVMCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B275E7BD2C56799F000D3CB3 /* SwiftUIMVVMCExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMVVMCExampleApp.swift; sourceTree = "<group>"; };
-		B275E7BF2C56799F000D3CB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B275E7C12C5679A1000D3CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B275E7C42C5679A1000D3CB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B27E85712C567AAE0081874E /* SwiftUI-MVVMC */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SwiftUI-MVVMC"; path = ../..; sourceTree = "<group>"; };
+		B27E85712C567AAE0081874E /* SwiftUI_MVVMC */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUI_MVVMC; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,16 +44,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28008072C57974D0035E429 /* SwiftUI_MVVMC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B26D08F12C5791640094CBFB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B26D08F72C5791DD0094CBFB /* SwiftUIMVVMCExampleApp.swift */,
+				B26D08F82C5791DD0094CBFB /* AppViewModel.swift */,
+				B26D08F52C5791DD0094CBFB /* AppCoordinator.swift */,
+				B26D08F62C5791DD0094CBFB /* AppCoordinatorRoute.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B26D08F22C5791690094CBFB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B26D09042C5791E80094CBFB /* Launch */,
+				B26D09002C5791E80094CBFB /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B26D09002C5791E80094CBFB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B26D08FE2C5791E80094CBFB /* HomeScreenView.swift */,
+				B26D08FF2C5791E80094CBFB /* HomeScreenViewModel.swift */,
+				B26D08FD2C5791E80094CBFB /* HomeScreenCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B26D09042C5791E80094CBFB /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				B26D09022C5791E80094CBFB /* LaunchScreenView.swift */,
+				B26D09032C5791E80094CBFB /* LaunchScreenViewModel.swift */,
+				B26D09012C5791E80094CBFB /* LaunchScreenCoordinator.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		B275E7B12C56799F000D3CB3 = {
 			isa = PBXGroup;
 			children = (
-				B27E85712C567AAE0081874E /* SwiftUI-MVVMC */,
+				B27E85712C567AAE0081874E /* SwiftUI_MVVMC */,
 				B275E7BC2C56799F000D3CB3 /* SwiftUIMVVMCExample */,
 				B275E7BB2C56799F000D3CB3 /* Products */,
 				B27E856C2C567A820081874E /* Frameworks */,
@@ -54,8 +112,8 @@
 		B275E7BC2C56799F000D3CB3 /* SwiftUIMVVMCExample */ = {
 			isa = PBXGroup;
 			children = (
-				B275E7BD2C56799F000D3CB3 /* SwiftUIMVVMCExampleApp.swift */,
-				B275E7BF2C56799F000D3CB3 /* ContentView.swift */,
+				B26D08F12C5791640094CBFB /* App */,
+				B26D08F22C5791690094CBFB /* Screens */,
 				B275E7C12C5679A1000D3CB3 /* Assets.xcassets */,
 				B275E7C32C5679A1000D3CB3 /* Preview Content */,
 			);
@@ -94,6 +152,7 @@
 			);
 			name = SwiftUIMVVMCExample;
 			packageProductDependencies = (
+				B28008062C57974D0035E429 /* SwiftUI_MVVMC */,
 			);
 			productName = SwiftUIMVVMCExample;
 			productReference = B275E7BA2C56799F000D3CB3 /* SwiftUIMVVMCExample.app */;
@@ -151,8 +210,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B275E7C02C56799F000D3CB3 /* ContentView.swift in Sources */,
-				B275E7BE2C56799F000D3CB3 /* SwiftUIMVVMCExampleApp.swift in Sources */,
+				B26D08FA2C5791DE0094CBFB /* AppCoordinatorRoute.swift in Sources */,
+				B26D09072C5791E80094CBFB /* HomeScreenViewModel.swift in Sources */,
+				B26D08FB2C5791DE0094CBFB /* SwiftUIMVVMCExampleApp.swift in Sources */,
+				B26D09082C5791E80094CBFB /* LaunchScreenCoordinator.swift in Sources */,
+				B26D08FC2C5791DE0094CBFB /* AppViewModel.swift in Sources */,
+				B26D090A2C5791E80094CBFB /* LaunchScreenViewModel.swift in Sources */,
+				B26D09062C5791E80094CBFB /* HomeScreenView.swift in Sources */,
+				B26D08F92C5791DD0094CBFB /* AppCoordinator.swift in Sources */,
+				B26D09092C5791E80094CBFB /* LaunchScreenView.swift in Sources */,
+				B26D09052C5791E80094CBFB /* HomeScreenCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +423,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B28008062C57974D0035E429 /* SwiftUI_MVVMC */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUI_MVVMC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B275E7B22C56799F000D3CB3 /* Project object */;
 }

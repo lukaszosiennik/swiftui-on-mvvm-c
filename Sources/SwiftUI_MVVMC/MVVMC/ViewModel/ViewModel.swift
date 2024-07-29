@@ -5,16 +5,16 @@
 import Combine
 import SwiftUI
 
-class ViewModel<
+open class ViewModel<
     Coordinator: CoordinatorProtocol
 >: ViewModelProtocol, ObservedObjectChangeTransmitterProtocol {
 
     @ObservedObject 
-    var coordinator: Coordinator
+    public var coordinator: Coordinator
     
     var transmissionSubscription: AnyCancellable?
 
-    init(coordinator: Coordinator) {
+    public init(coordinator: Coordinator) {
         self.coordinator = coordinator
         
         initiateTransmission(for: coordinator)

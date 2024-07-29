@@ -4,7 +4,7 @@
 
 import Foundation
 
-protocol CoordinatorProtocol: AnyObject, ObservableObject {
+public protocol CoordinatorProtocol: AnyObject, ObservableObject {
     
     associatedtype Coordinator: CoordinatorProtocol
     

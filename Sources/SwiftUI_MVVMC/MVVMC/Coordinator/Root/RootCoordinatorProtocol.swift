@@ -2,7 +2,7 @@
 //  Created by Łukasz Osiennik on 28/07/2024.
 //
 
-protocol RootCoordinatorProtocol: CoordinatorProtocol {
+public protocol RootCoordinatorProtocol: CoordinatorProtocol {
     
     associatedtype RootRouteManagerType: RootRouteManagerProtocol
     

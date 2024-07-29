@@ -5,7 +5,7 @@
 extension Coordinator {
     
     @discardableResult
-    func coordToRoot<RouteID: RootRouteID>(
+    public func goToRoot<RouteID: RootRouteID>(
         routeID: RouteID
     ) -> Bool {
         guard let rootRouteManager: RootRouteManager<RouteID> = provideRootRouteManager() else {
@@ -17,7 +17,7 @@ extension Coordinator {
         return true
     }
     
-    private func provideRootRouteManager<RouteID: RootRouteID>() -> RootRouteManager<RouteID>? {
+    func provideRootRouteManager<RouteID: RootRouteID>() -> RootRouteManager<RouteID>? {
         var coordinator: Coordinator? = self
         
         while (coordinator?.parent != nil) {

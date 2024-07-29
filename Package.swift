@@ -3,26 +3,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUI-MVVMC",
+    name: "SwiftUI_MVVMC",
     platforms: [
         .iOS(.v17),
     ],
     products: [
         .library(
-            name: "SwiftUI-MVVMC",
+            name: "SwiftUI_MVVMC",
             targets: [
-                "SwiftUI-MVVMC",
+                "SwiftUI_MVVMC",
             ]
         ),
     ],
     targets: [
         .target(
-            name: "SwiftUI-MVVMC"
+            name: "SwiftUI_MVVMC"
         ),
         .testTarget(
-            name: "SwiftUI-MVVMC_Tests",
+            name: "SwiftUI_MVVMC_Tests",
             dependencies: [
-                "SwiftUI-MVVMC",
+                "SwiftUI_MVVMC",
             ]
         ),
     ]

@@ -4,14 +4,14 @@
 
 import Combine
 
-final class RootRouteManager<
+public final class RootRouteManager<
     RouteID: RootRouteID
 >: RootRouteManagerProtocol {
 
     @Published 
-    var currentRouteID: RouteID
+    public var currentRouteID: RouteID
     
-    init(currentRouteID: RouteID) {
+    public init(currentRouteID: RouteID) {
         self.currentRouteID = currentRouteID
     }
 }
