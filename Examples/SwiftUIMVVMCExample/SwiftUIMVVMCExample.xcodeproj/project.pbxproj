@@ -15,9 +15,9 @@
 		B26D08FA2C5791DE0094CBFB /* AppRootRouteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F62C5791DD0094CBFB /* AppRootRouteID.swift */; };
 		B26D08FB2C5791DE0094CBFB /* SwiftUIMVVMCExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F72C5791DD0094CBFB /* SwiftUIMVVMCExampleApp.swift */; };
 		B26D08FC2C5791DE0094CBFB /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F82C5791DD0094CBFB /* AppViewModel.swift */; };
-		B26D09052C5791E80094CBFB /* HomeScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08FD2C5791E80094CBFB /* HomeScreenCoordinator.swift */; };
-		B26D09062C5791E80094CBFB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08FE2C5791E80094CBFB /* HomeScreenView.swift */; };
-		B26D09072C5791E80094CBFB /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08FF2C5791E80094CBFB /* HomeScreenViewModel.swift */; };
+		B26D09052C5791E80094CBFB /* EmptyScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08FD2C5791E80094CBFB /* EmptyScreenCoordinator.swift */; };
+		B26D09062C5791E80094CBFB /* EmptyScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08FE2C5791E80094CBFB /* EmptyScreenView.swift */; };
+		B26D09072C5791E80094CBFB /* EmptyScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08FF2C5791E80094CBFB /* EmptyScreenViewModel.swift */; };
 		B26D09082C5791E80094CBFB /* LaunchScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D09012C5791E80094CBFB /* LaunchScreenCoordinator.swift */; };
 		B26D09092C5791E80094CBFB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D09022C5791E80094CBFB /* LaunchScreenView.swift */; };
 		B26D090A2C5791E80094CBFB /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D09032C5791E80094CBFB /* LaunchScreenViewModel.swift */; };
@@ -46,9 +46,9 @@
 		B26D08F62C5791DD0094CBFB /* AppRootRouteID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRootRouteID.swift; sourceTree = "<group>"; };
 		B26D08F72C5791DD0094CBFB /* SwiftUIMVVMCExampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIMVVMCExampleApp.swift; sourceTree = "<group>"; };
 		B26D08F82C5791DD0094CBFB /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
-		B26D08FD2C5791E80094CBFB /* HomeScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenCoordinator.swift; sourceTree = "<group>"; };
-		B26D08FE2C5791E80094CBFB /* HomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
-		B26D08FF2C5791E80094CBFB /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		B26D08FD2C5791E80094CBFB /* EmptyScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyScreenCoordinator.swift; sourceTree = "<group>"; };
+		B26D08FE2C5791E80094CBFB /* EmptyScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyScreenView.swift; sourceTree = "<group>"; };
+		B26D08FF2C5791E80094CBFB /* EmptyScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyScreenViewModel.swift; sourceTree = "<group>"; };
 		B26D09012C5791E80094CBFB /* LaunchScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenCoordinator.swift; sourceTree = "<group>"; };
 		B26D09022C5791E80094CBFB /* LaunchScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		B26D09032C5791E80094CBFB /* LaunchScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewModel.swift; sourceTree = "<group>"; };
@@ -108,21 +108,21 @@
 			children = (
 				B23BE04A2C5AAA2F009858AB /* RootRouteIDs */,
 				B26D09042C5791E80094CBFB /* Launch */,
-				B26D09002C5791E80094CBFB /* Home */,
 				B277746B2C5A7E55003BC0BD /* Navigation */,
 				B27774732C5A7FBE003BC0BD /* Template */,
+				B26D09002C5791E80094CBFB /* Empty */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		B26D09002C5791E80094CBFB /* Home */ = {
+		B26D09002C5791E80094CBFB /* Empty */ = {
 			isa = PBXGroup;
 			children = (
-				B26D08FE2C5791E80094CBFB /* HomeScreenView.swift */,
-				B26D08FF2C5791E80094CBFB /* HomeScreenViewModel.swift */,
-				B26D08FD2C5791E80094CBFB /* HomeScreenCoordinator.swift */,
+				B26D08FE2C5791E80094CBFB /* EmptyScreenView.swift */,
+				B26D08FF2C5791E80094CBFB /* EmptyScreenViewModel.swift */,
+				B26D08FD2C5791E80094CBFB /* EmptyScreenCoordinator.swift */,
 			);
-			path = Home;
+			path = Empty;
 			sourceTree = "<group>";
 		};
 		B26D09042C5791E80094CBFB /* Launch */ = {
@@ -294,7 +294,7 @@
 				B23BE04E2C5AAA2F009858AB /* RootRouteIDsScreenViewModel.swift in Sources */,
 				B23BE04D2C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift in Sources */,
 				B27774702C5A7EA5003BC0BD /* NavigationRootScreenViewModel.swift in Sources */,
-				B26D09072C5791E80094CBFB /* HomeScreenViewModel.swift in Sources */,
+				B26D09072C5791E80094CBFB /* EmptyScreenViewModel.swift in Sources */,
 				B27774822C5A85FA003BC0BD /* NavigationScreenViewModel.swift in Sources */,
 				B26D08FB2C5791DE0094CBFB /* SwiftUIMVVMCExampleApp.swift in Sources */,
 				B27774782C5A7FF0003BC0BD /* TemplateScreenViewModel.swift in Sources */,
@@ -307,11 +307,11 @@
 				B23BE04B2C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift in Sources */,
 				B26D090A2C5791E80094CBFB /* LaunchScreenViewModel.swift in Sources */,
 				B27774722C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift in Sources */,
-				B26D09062C5791E80094CBFB /* HomeScreenView.swift in Sources */,
+				B26D09062C5791E80094CBFB /* EmptyScreenView.swift in Sources */,
 				B26D08F92C5791DD0094CBFB /* AppCoordinator.swift in Sources */,
 				B277747A2C5A7FFE003BC0BD /* TemplateScreenCoordinator.swift in Sources */,
 				B26D09092C5791E80094CBFB /* LaunchScreenView.swift in Sources */,
-				B26D09052C5791E80094CBFB /* HomeScreenCoordinator.swift in Sources */,
+				B26D09052C5791E80094CBFB /* EmptyScreenCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

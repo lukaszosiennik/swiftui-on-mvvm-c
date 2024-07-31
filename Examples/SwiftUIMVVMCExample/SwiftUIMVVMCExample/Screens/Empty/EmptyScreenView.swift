@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct HomeScreenView<ViewModel: HomeScreenViewModelProtocol>: View {
+struct EmptyScreenView<ViewModel: EmptyScreenViewModelProtocol>: View {
     
     @ObservedObject
     var viewModel: ViewModel
@@ -15,9 +15,9 @@ struct HomeScreenView<ViewModel: HomeScreenViewModelProtocol>: View {
 }
 
 #Preview {
-    HomeScreenView(
-        viewModel: HomeScreenViewModel(
-            coordinator: HomeScreenCoordinator(parent: nil)
+    EmptyScreenView(
+        viewModel: EmptyScreenViewModel(
+            coordinator: EmptyScreenCoordinator(parent: nil)
         )
     )
 }
