@@ -11,7 +11,7 @@ struct NavigationScreenView<ViewModel: NavigationScreenViewModelProtocol>: View 
 
     var body: some View {
         NavigationStack {
-            viewModel.coordinator.coordToRoot()
+            viewModel.coordinator.goToRoot()
         }
     }
 }

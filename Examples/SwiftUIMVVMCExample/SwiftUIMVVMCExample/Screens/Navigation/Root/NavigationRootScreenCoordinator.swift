@@ -9,14 +9,14 @@ protocol NavigationRootScreenCoordinatorProtocol: CoordinatorProtocol {
     
     associatedtype View: SwiftUI.View
     
-    typealias NavigationRouteID = NavigationRootScreenNavigationRouteID
+    typealias RouteID = NavigationRootScreenNavigationRouteID
     
-    func goTo(routeID: NavigationRouteID) -> View
+    func goTo(routeID: RouteID) -> View
 }
 
 final class NavigationRootScreenCoordinator: Coordinator, NavigationRootScreenCoordinatorProtocol {
     
-    func goTo(routeID: NavigationRouteID) -> some View {
+    func goTo(routeID: RouteID) -> some View {
         TemplateScreenView(
             viewModel: TemplateScreenViewModel(
                 coordinator: TemplateScreenCoordinator(parent: self)

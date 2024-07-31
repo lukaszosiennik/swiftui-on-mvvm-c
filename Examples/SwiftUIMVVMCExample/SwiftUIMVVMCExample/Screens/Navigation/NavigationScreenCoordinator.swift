@@ -9,12 +9,12 @@ protocol NavigationScreenCoordinatorProtocol: CoordinatorProtocol {
     
     associatedtype View: SwiftUI.View
     
-    func coordToRoot() -> View
+    func goToRoot() -> View
 }
 
 final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinatorProtocol {
     
-    func coordToRoot() -> some View {
+    func goToRoot() -> some View {
         NavigationRootScreenView(
             viewModel: NavigationRootScreenViewModel(
                 coordinator: NavigationRootScreenCoordinator(parent: self)
