@@ -12,9 +12,9 @@ protocol AppCoordinatorProtocol: CoordinatorProtocol {
     func goToCurrentRoute() -> View
 }
     
-final class AppCoordinator: RootCoordinator<RootRouteManager<AppCoordinatorRoute>>, AppCoordinatorProtocol {
+final class AppCoordinator: RootCoordinator<RootRouteManager<AppRootRouteID>>, AppCoordinatorProtocol {
 
-    init(rootRouteManager: RootRouteManager<AppCoordinatorRoute> = .init(currentRouteID: .launch)) {
+    init(rootRouteManager: RootRouteManager<AppRootRouteID> = .init(currentRouteID: .launch)) {
         super.init(parent: nil, routeManager: rootRouteManager)
     }
     
@@ -22,7 +22,7 @@ final class AppCoordinator: RootCoordinator<RootRouteManager<AppCoordinatorRoute
         goTo(route: routeManager.currentRouteID)
     }
 
-    func goTo(route: AppCoordinatorRoute) -> some View {
+    func goTo(route: AppRootRouteID) -> some View {
         Group {
             switch route {
             case .launch:
@@ -44,9 +44,9 @@ final class AppCoordinator: RootCoordinator<RootRouteManager<AppCoordinatorRoute
     }
     
     func goToHomeScreen() -> some View {
-        HomeScreenView(
-            viewModel: HomeScreenViewModel(
-                coordinator: HomeScreenCoordinator(
+        NavigationScreenView(
+            viewModel: NavigationScreenViewModel(
+                coordinator: NavigationScreenCoordinator(
                     parent: self
                 )
             )

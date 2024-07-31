@@ -4,7 +4,7 @@
 
 import SwiftUI_MVVMC
 
-enum AppCoordinatorRoute: RootRouteID {
+enum AppRootRouteID: RootRouteID {
          
     case launch
     case home

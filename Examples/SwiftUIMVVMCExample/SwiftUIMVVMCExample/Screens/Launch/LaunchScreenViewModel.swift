@@ -8,5 +8,5 @@ protocol LaunchScreenViewModelProtocol: ViewModelProtocol
 where Coordinator: LaunchScreenCoordinatorProtocol {}
 
 final class LaunchScreenViewModel<
-    CoordinatorType: LaunchScreenCoordinatorProtocol
->: ViewModel<CoordinatorType>, LaunchScreenViewModelProtocol {}
+    Coordinator: LaunchScreenCoordinatorProtocol
+>: ViewModel<Coordinator>, LaunchScreenViewModelProtocol {}

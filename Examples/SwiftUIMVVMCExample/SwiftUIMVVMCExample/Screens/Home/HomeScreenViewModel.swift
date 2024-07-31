@@ -8,5 +8,5 @@ protocol HomeScreenViewModelProtocol: ViewModelProtocol
 where Coordinator: HomeScreenCoordinatorProtocol {}
 
 final class HomeScreenViewModel<
-    CoordinatorType: HomeScreenCoordinatorProtocol
->: ViewModel<CoordinatorType>, HomeScreenViewModelProtocol {}
+    Coordinator: HomeScreenCoordinatorProtocol
+>: ViewModel<Coordinator>, HomeScreenViewModelProtocol {}

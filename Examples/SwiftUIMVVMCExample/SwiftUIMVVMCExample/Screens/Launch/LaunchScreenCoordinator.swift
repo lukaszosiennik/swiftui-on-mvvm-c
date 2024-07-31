@@ -13,6 +13,6 @@ protocol LaunchScreenCoordinatorProtocol: CoordinatorProtocol {
 final class LaunchScreenCoordinator: Coordinator, LaunchScreenCoordinatorProtocol {
     
     func goToHomeScreen() -> Bool {
-        goToRoot(routeID: AppCoordinatorRoute.home)
+        goToRoot(routeID: AppRootRouteID.home)
     }
 }

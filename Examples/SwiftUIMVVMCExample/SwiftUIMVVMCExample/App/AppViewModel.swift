@@ -8,5 +8,5 @@ protocol AppViewModelProtocol: ViewModelProtocol
 where Coordinator: AppCoordinatorProtocol {}
 
 final class AppViewModel<
-    CoordinatorType: AppCoordinatorProtocol
->: ViewModel<CoordinatorType>, AppViewModelProtocol {}
+    Coordinator: AppCoordinatorProtocol
+>: ViewModel<Coordinator>, AppViewModelProtocol {}
