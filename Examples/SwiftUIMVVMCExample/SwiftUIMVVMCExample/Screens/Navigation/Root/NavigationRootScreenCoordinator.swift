@@ -17,11 +17,27 @@ protocol NavigationRootScreenCoordinatorProtocol: CoordinatorProtocol {
 final class NavigationRootScreenCoordinator: Coordinator, NavigationRootScreenCoordinatorProtocol {
     
     func goTo(routeID: RouteID) -> some View {
-        TemplateScreenView(
-            viewModel: TemplateScreenViewModel(
-                coordinator: TemplateScreenCoordinator(parent: self)
-            ),
-            params: .init(for: routeID)
-        )
+        Group {
+            switch routeID {
+            case .first, .second:
+                TemplateScreenView(
+                    viewModel: TemplateScreenViewModel(
+                        coordinator: TemplateScreenCoordinator(parent: self)
+                    ),
+                    params: .init(for: routeID)
+                )
+            case .third:
+                RootRouteIDsScreenView(
+                    viewModel: RootRouteIDsScreenViewModel(
+                        coordinator: RootRouteIDsScreenCoordinator(
+                            parent: self
+                        )
+                    ),
+                    params: .init(
+                        excludedRouteID: .home
+                    )
+                )
+            }
+        }
     }
 }

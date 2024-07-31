@@ -7,12 +7,12 @@ import SwiftUI_MVVMC
 protocol LaunchScreenCoordinatorProtocol: CoordinatorProtocol {
     
     @discardableResult
-    func goToHomeScreen() -> Bool
+    func goToRootRouteIDsScreen() -> Bool
 }
 
 final class LaunchScreenCoordinator: Coordinator, LaunchScreenCoordinatorProtocol {
     
-    func goToHomeScreen() -> Bool {
-        goToRoot(routeID: AppRootRouteID.home)
+    func goToRootRouteIDsScreen() -> Bool {
+        goToRoot(routeID: AppRootRouteID.rootRouteIDs)
     }
 }

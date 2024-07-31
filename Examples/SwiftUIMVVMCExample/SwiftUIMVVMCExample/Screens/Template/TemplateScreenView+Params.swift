@@ -20,7 +20,7 @@ extension TemplateScreenView.Params {
             case .second:
                 .init(title: "NavigationStack Second")
             case .third:
-                .init(title: "NavigationStack Third")
+                .init(title: "NavigationStack RootRouteIDs")
             }
         }()
     }

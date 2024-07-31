@@ -4,8 +4,13 @@
 
 import SwiftUI_MVVMC
 
-enum AppRootRouteID: RootRouteID {
+enum AppRootRouteID: Int, Identifiable, CaseIterable, RootRouteID {
+    
+    var id: Int {
+        rawValue
+    }
          
     case launch
+    case rootRouteIDs
     case home
 }

@@ -13,7 +13,7 @@ struct LaunchScreenView<ViewModel: LaunchScreenViewModelProtocol>: View {
         Text("Launch Screen")
         .onAppear() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                viewModel.coordinator.goToHomeScreen()
+                viewModel.coordinator.goToRootRouteIDsScreen()
             }
         }
     }

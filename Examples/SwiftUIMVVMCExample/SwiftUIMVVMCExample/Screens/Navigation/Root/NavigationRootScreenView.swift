@@ -22,7 +22,7 @@ struct NavigationRootScreenView<ViewModel: NavigationRootScreenViewModelProtocol
                 Text("GoTo Second")
             }
             NavigationLink(value: ViewModel.Coordinator.RouteID.third) {
-                Text("GoTo Third")
+                Text("GoTo RootRouteIDs")
             }
             .navigationDestination(for: ViewModel.Coordinator.RouteID.self) { routeID in
                 viewModel.coordinator.goTo(routeID: routeID)

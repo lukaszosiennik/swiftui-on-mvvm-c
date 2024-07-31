@@ -27,6 +27,8 @@ final class AppCoordinator: RootCoordinator<RootRouteManager<AppRootRouteID>>, A
             switch route {
             case .launch:
                 goToLaunchScreen()
+            case .rootRouteIDs:
+                goToRootRouteIDsScreen()
             case .home:
                 goToHomeScreen()
             }
@@ -39,6 +41,19 @@ final class AppCoordinator: RootCoordinator<RootRouteManager<AppRootRouteID>>, A
                 coordinator: LaunchScreenCoordinator(
                     parent: self
                 )
+            )
+        )
+    }
+    
+    func goToRootRouteIDsScreen() -> some View {
+        RootRouteIDsScreenView(
+            viewModel: RootRouteIDsScreenViewModel(
+                coordinator: RootRouteIDsScreenCoordinator(
+                    parent: self
+                )
+            ), 
+            params: .init(
+                excludedRouteID: .rootRouteIDs
             )
         )
     }

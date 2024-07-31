@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B23BE04B2C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BE0462C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift */; };
+		B23BE04C2C5AAA2F009858AB /* RootRouteIDsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BE0472C5AAA2F009858AB /* RootRouteIDsScreenView.swift */; };
+		B23BE04D2C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BE0482C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift */; };
+		B23BE04E2C5AAA2F009858AB /* RootRouteIDsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BE0492C5AAA2F009858AB /* RootRouteIDsScreenViewModel.swift */; };
 		B26D08F92C5791DD0094CBFB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F52C5791DD0094CBFB /* AppCoordinator.swift */; };
 		B26D08FA2C5791DE0094CBFB /* AppRootRouteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F62C5791DD0094CBFB /* AppRootRouteID.swift */; };
 		B26D08FB2C5791DE0094CBFB /* SwiftUIMVVMCExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F72C5791DD0094CBFB /* SwiftUIMVVMCExampleApp.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B23BE0462C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouteIDsScreenCoordinator.swift; sourceTree = "<group>"; };
+		B23BE0472C5AAA2F009858AB /* RootRouteIDsScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouteIDsScreenView.swift; sourceTree = "<group>"; };
+		B23BE0482C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootRouteIDsScreenView+Params.swift"; sourceTree = "<group>"; };
+		B23BE0492C5AAA2F009858AB /* RootRouteIDsScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouteIDsScreenViewModel.swift; sourceTree = "<group>"; };
 		B26D08F52C5791DD0094CBFB /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B26D08F62C5791DD0094CBFB /* AppRootRouteID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRootRouteID.swift; sourceTree = "<group>"; };
 		B26D08F72C5791DD0094CBFB /* SwiftUIMVVMCExampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIMVVMCExampleApp.swift; sourceTree = "<group>"; };
@@ -73,6 +81,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B23BE04A2C5AAA2F009858AB /* RootRouteIDs */ = {
+			isa = PBXGroup;
+			children = (
+				B23BE0472C5AAA2F009858AB /* RootRouteIDsScreenView.swift */,
+				B23BE0492C5AAA2F009858AB /* RootRouteIDsScreenViewModel.swift */,
+				B23BE0462C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift */,
+				B23BE0482C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift */,
+			);
+			path = RootRouteIDs;
+			sourceTree = "<group>";
+		};
 		B26D08F12C5791640094CBFB /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +106,7 @@
 		B26D08F22C5791690094CBFB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B23BE04A2C5AAA2F009858AB /* RootRouteIDs */,
 				B26D09042C5791E80094CBFB /* Launch */,
 				B26D09002C5791E80094CBFB /* Home */,
 				B277746B2C5A7E55003BC0BD /* Navigation */,
@@ -271,6 +291,8 @@
 				B277746E2C5A7E8F003BC0BD /* NavigationRootScreenView.swift in Sources */,
 				B26D08FA2C5791DE0094CBFB /* AppRootRouteID.swift in Sources */,
 				B27774762C5A7FE3003BC0BD /* TemplateScreenView.swift in Sources */,
+				B23BE04E2C5AAA2F009858AB /* RootRouteIDsScreenViewModel.swift in Sources */,
+				B23BE04D2C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift in Sources */,
 				B27774702C5A7EA5003BC0BD /* NavigationRootScreenViewModel.swift in Sources */,
 				B26D09072C5791E80094CBFB /* HomeScreenViewModel.swift in Sources */,
 				B27774822C5A85FA003BC0BD /* NavigationScreenViewModel.swift in Sources */,
@@ -280,7 +302,9 @@
 				B27774842C5A8605003BC0BD /* NavigationScreenCoordinator.swift in Sources */,
 				B27774802C5A85F3003BC0BD /* NavigationScreenView.swift in Sources */,
 				B26D09082C5791E80094CBFB /* LaunchScreenCoordinator.swift in Sources */,
+				B23BE04C2C5AAA2F009858AB /* RootRouteIDsScreenView.swift in Sources */,
 				B26D08FC2C5791DE0094CBFB /* AppViewModel.swift in Sources */,
+				B23BE04B2C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift in Sources */,
 				B26D090A2C5791E80094CBFB /* LaunchScreenViewModel.swift in Sources */,
 				B27774722C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift in Sources */,
 				B26D09062C5791E80094CBFB /* HomeScreenView.swift in Sources */,
