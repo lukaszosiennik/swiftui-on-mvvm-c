@@ -14,17 +14,17 @@ protocol AppCoordinatorProtocol: CoordinatorProtocol {
     
 final class AppCoordinator: RootCoordinator<RootRouteManager<AppRootRouteID>>, AppCoordinatorProtocol {
 
-    init(rootRouteManager: RootRouteManager<AppRootRouteID> = .init(currentRouteID: .launch)) {
+    init(rootRouteManager: RootRouteManager = .init(currentRouteID: .launch)) {
         super.init(parent: nil, routeManager: rootRouteManager)
     }
     
     func goToCurrentRoute() -> some View {
-        goTo(route: routeManager.currentRouteID)
+        goTo(routeID: routeManager.currentRouteID)
     }
 
-    func goTo(route: AppRootRouteID) -> some View {
+    func goTo(routeID: AppRootRouteID) -> some View {
         Group {
-            switch route {
+            switch routeID {
             case .launch:
                 goToLaunchScreen()
             case .rootRouteIDs:

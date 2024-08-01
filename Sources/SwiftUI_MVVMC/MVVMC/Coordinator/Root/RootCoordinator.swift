@@ -6,17 +6,17 @@ import Combine
 import SwiftUI
 
 open class RootCoordinator<
-    RootRouteManagerType: RootRouteManagerProtocol
+    RootRouteManager: RootRouteManagerProtocol
 >: Coordinator, RootCoordinatorProtocol, ObservedObjectChangeTransmitterProtocol {
 
     @ObservedObject
-    public private(set) var routeManager: RootRouteManagerType
+    public private(set) var routeManager: RootRouteManager
     
     var transmissionSubscription: AnyCancellable?
     
     public init(
         parent: Coordinator?,
-        routeManager: RootRouteManagerType
+        routeManager: RootRouteManager
     ) {
         self.routeManager = routeManager
         super.init(parent: parent)

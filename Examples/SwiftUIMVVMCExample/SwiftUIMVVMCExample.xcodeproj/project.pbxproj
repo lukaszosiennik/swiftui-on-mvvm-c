@@ -30,11 +30,14 @@
 		B27774782C5A7FF0003BC0BD /* TemplateScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27774772C5A7FF0003BC0BD /* TemplateScreenViewModel.swift */; };
 		B277747A2C5A7FFE003BC0BD /* TemplateScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27774792C5A7FFE003BC0BD /* TemplateScreenCoordinator.swift */; };
 		B277747C2C5A801A003BC0BD /* TemplateScreenView+Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277747B2C5A801A003BC0BD /* TemplateScreenView+Params.swift */; };
-		B277747E2C5A842E003BC0BD /* NavigationRootScreenNavigationRouteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277747D2C5A842E003BC0BD /* NavigationRootScreenNavigationRouteID.swift */; };
+		B277747E2C5A842E003BC0BD /* NavigationScreenNavigationRouteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277747D2C5A842E003BC0BD /* NavigationScreenNavigationRouteID.swift */; };
 		B27774802C5A85F3003BC0BD /* NavigationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277747F2C5A85F3003BC0BD /* NavigationScreenView.swift */; };
 		B27774822C5A85FA003BC0BD /* NavigationScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27774812C5A85FA003BC0BD /* NavigationScreenViewModel.swift */; };
 		B27774842C5A8605003BC0BD /* NavigationScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27774832C5A8605003BC0BD /* NavigationScreenCoordinator.swift */; };
 		B28008072C57974D0035E429 /* SwiftUI_MVVMC in Frameworks */ = {isa = PBXBuildFile; productRef = B28008062C57974D0035E429 /* SwiftUI_MVVMC */; };
+		B2ECAC1D2C5BC2B900E8F57F /* NavigationChildScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAC1A2C5BC2B900E8F57F /* NavigationChildScreenView.swift */; };
+		B2ECAC1E2C5BC2B900E8F57F /* NavigationChildScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAC1B2C5BC2B900E8F57F /* NavigationChildScreenViewModel.swift */; };
+		B2ECAC1F2C5BC2B900E8F57F /* NavigationChildScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAC1C2C5BC2B900E8F57F /* NavigationChildScreenCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,11 +65,14 @@
 		B27774772C5A7FF0003BC0BD /* TemplateScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScreenViewModel.swift; sourceTree = "<group>"; };
 		B27774792C5A7FFE003BC0BD /* TemplateScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScreenCoordinator.swift; sourceTree = "<group>"; };
 		B277747B2C5A801A003BC0BD /* TemplateScreenView+Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TemplateScreenView+Params.swift"; sourceTree = "<group>"; };
-		B277747D2C5A842E003BC0BD /* NavigationRootScreenNavigationRouteID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootScreenNavigationRouteID.swift; sourceTree = "<group>"; };
+		B277747D2C5A842E003BC0BD /* NavigationScreenNavigationRouteID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationScreenNavigationRouteID.swift; sourceTree = "<group>"; };
 		B277747F2C5A85F3003BC0BD /* NavigationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationScreenView.swift; sourceTree = "<group>"; };
 		B27774812C5A85FA003BC0BD /* NavigationScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationScreenViewModel.swift; sourceTree = "<group>"; };
 		B27774832C5A8605003BC0BD /* NavigationScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationScreenCoordinator.swift; sourceTree = "<group>"; };
 		B27E85712C567AAE0081874E /* SwiftUI_MVVMC */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUI_MVVMC; path = ../..; sourceTree = "<group>"; };
+		B2ECAC1A2C5BC2B900E8F57F /* NavigationChildScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationChildScreenView.swift; sourceTree = "<group>"; };
+		B2ECAC1B2C5BC2B900E8F57F /* NavigationChildScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationChildScreenViewModel.swift; sourceTree = "<group>"; };
+		B2ECAC1C2C5BC2B900E8F57F /* NavigationChildScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationChildScreenCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,9 +182,11 @@
 			isa = PBXGroup;
 			children = (
 				B277746C2C5A7E62003BC0BD /* Root */,
+				B2ECAC192C5BC27800E8F57F /* Child */,
 				B277747F2C5A85F3003BC0BD /* NavigationScreenView.swift */,
 				B27774812C5A85FA003BC0BD /* NavigationScreenViewModel.swift */,
 				B27774832C5A8605003BC0BD /* NavigationScreenCoordinator.swift */,
+				B277747D2C5A842E003BC0BD /* NavigationScreenNavigationRouteID.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -189,7 +197,6 @@
 				B277746D2C5A7E8F003BC0BD /* NavigationRootScreenView.swift */,
 				B277746F2C5A7EA5003BC0BD /* NavigationRootScreenViewModel.swift */,
 				B27774712C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift */,
-				B277747D2C5A842E003BC0BD /* NavigationRootScreenNavigationRouteID.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -210,6 +217,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2ECAC192C5BC27800E8F57F /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				B2ECAC1A2C5BC2B900E8F57F /* NavigationChildScreenView.swift */,
+				B2ECAC1B2C5BC2B900E8F57F /* NavigationChildScreenViewModel.swift */,
+				B2ECAC1C2C5BC2B900E8F57F /* NavigationChildScreenCoordinator.swift */,
+			);
+			path = Child;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B277747E2C5A842E003BC0BD /* NavigationRootScreenNavigationRouteID.swift in Sources */,
+				B277747E2C5A842E003BC0BD /* NavigationScreenNavigationRouteID.swift in Sources */,
 				B277746E2C5A7E8F003BC0BD /* NavigationRootScreenView.swift in Sources */,
 				B26D08FA2C5791DE0094CBFB /* AppRootRouteID.swift in Sources */,
 				B27774762C5A7FE3003BC0BD /* TemplateScreenView.swift in Sources */,
@@ -301,14 +318,17 @@
 				B277747C2C5A801A003BC0BD /* TemplateScreenView+Params.swift in Sources */,
 				B27774842C5A8605003BC0BD /* NavigationScreenCoordinator.swift in Sources */,
 				B27774802C5A85F3003BC0BD /* NavigationScreenView.swift in Sources */,
+				B2ECAC1F2C5BC2B900E8F57F /* NavigationChildScreenCoordinator.swift in Sources */,
 				B26D09082C5791E80094CBFB /* LaunchScreenCoordinator.swift in Sources */,
 				B23BE04C2C5AAA2F009858AB /* RootRouteIDsScreenView.swift in Sources */,
 				B26D08FC2C5791DE0094CBFB /* AppViewModel.swift in Sources */,
 				B23BE04B2C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift in Sources */,
+				B2ECAC1E2C5BC2B900E8F57F /* NavigationChildScreenViewModel.swift in Sources */,
 				B26D090A2C5791E80094CBFB /* LaunchScreenViewModel.swift in Sources */,
 				B27774722C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift in Sources */,
 				B26D09062C5791E80094CBFB /* EmptyScreenView.swift in Sources */,
 				B26D08F92C5791DD0094CBFB /* AppCoordinator.swift in Sources */,
+				B2ECAC1D2C5BC2B900E8F57F /* NavigationChildScreenView.swift in Sources */,
 				B277747A2C5A7FFE003BC0BD /* TemplateScreenCoordinator.swift in Sources */,
 				B26D09092C5791E80094CBFB /* LaunchScreenView.swift in Sources */,
 				B26D09052C5791E80094CBFB /* EmptyScreenCoordinator.swift in Sources */,

@@ -12,7 +12,7 @@ where Self.ObjectWillChangePublisher == ObservableObjectPublisher {
 
 extension ObservedObjectChangeTransmitterProtocol {
     
-    func initiateTransmission<ObjectType: ObservableObject>(for object: ObjectType) {
+    func initiateTransmission<Object: ObservableObject>(for object: Object) {
         transmissionSubscription = object
             .objectWillChange
             .sink { [weak self] _ in

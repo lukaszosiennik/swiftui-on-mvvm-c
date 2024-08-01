@@ -12,7 +12,7 @@ extension TemplateScreenView {
 
 extension TemplateScreenView.Params {
     
-    init(for routeID: NavigationRootScreenNavigationRouteID) {
+    init(for routeID: NavigationScreenNavigationRouteID) {
         self = {
             switch routeID {
             case .first:

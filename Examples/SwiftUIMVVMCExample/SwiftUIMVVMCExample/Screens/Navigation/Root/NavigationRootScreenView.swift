@@ -15,17 +15,26 @@ struct NavigationRootScreenView<ViewModel: NavigationRootScreenViewModelProtocol
             
             Spacer().frame(height: 20)
             
+            Button("Button GoTo First") {
+                viewModel.coordinator.addToPath(routeID: ViewModel.Coordinator.RouteID.first)
+            }
+            Button("Button GoTo Second") {
+                viewModel.coordinator.addToPath(routeID: ViewModel.Coordinator.RouteID.second)
+            }
+            Button("Button GoTo RootRouteIDs") {
+                viewModel.coordinator.addToPath(routeID: ViewModel.Coordinator.RouteID.third)
+            }
+            
+            Spacer().frame(height: 20)
+            
             NavigationLink(value: ViewModel.Coordinator.RouteID.first) {
-                Text("GoTo First")
+                Text("Link GoTo First")
             }
             NavigationLink(value: ViewModel.Coordinator.RouteID.second) {
-                Text("GoTo Second")
+                Text("Link GoTo Second")
             }
             NavigationLink(value: ViewModel.Coordinator.RouteID.third) {
-                Text("GoTo RootRouteIDs")
-            }
-            .navigationDestination(for: ViewModel.Coordinator.RouteID.self) { routeID in
-                viewModel.coordinator.goTo(routeID: routeID)
+                Text("Link GoTo RootRouteIDs")
             }
         }
     }

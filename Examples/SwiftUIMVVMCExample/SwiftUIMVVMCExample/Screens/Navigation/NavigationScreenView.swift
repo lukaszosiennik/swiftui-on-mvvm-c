@@ -10,8 +10,11 @@ struct NavigationScreenView<ViewModel: NavigationScreenViewModelProtocol>: View 
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $viewModel.coordinator.pathRaw) {
             viewModel.coordinator.goToRoot()
+            .navigationDestination(for: ViewModel.Coordinator.RouteID.self) { routeID in
+                viewModel.coordinator.goTo(routeID: routeID)
+            }
         }
     }
 }
