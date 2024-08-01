@@ -3,5 +3,3 @@
 //
 
 public protocol NavigationRouteID: Hashable {}
-
-public enum EmptyNavigationRouteID: NavigationRouteID {}

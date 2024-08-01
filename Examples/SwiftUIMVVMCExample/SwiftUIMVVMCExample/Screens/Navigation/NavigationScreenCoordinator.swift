@@ -5,7 +5,7 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-protocol NavigationScreenCoordinatorProtocol: NavigationCoordinatorProtocol {}
+protocol NavigationScreenCoordinatorProtocol: NavigationStackCoordinatorProtocol {}
 
 final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinatorProtocol {
 

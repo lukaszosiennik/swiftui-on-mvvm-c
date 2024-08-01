@@ -4,9 +4,9 @@
 
 import Combine
 
-public final class RootRouteManager<
+public final class RootRouteIDManager<
     RouteID: RootRouteID
->: RootRouteManagerProtocol {
+>: RootRouteIDManagerProtocol {
 
     @Published 
     public var currentRouteID: RouteID

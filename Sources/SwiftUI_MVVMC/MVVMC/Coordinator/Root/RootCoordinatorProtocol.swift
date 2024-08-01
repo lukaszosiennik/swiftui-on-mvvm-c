@@ -4,7 +4,7 @@
 
 public protocol RootCoordinatorProtocol: CoordinatorProtocol {
     
-    associatedtype RootRouteManager: RootRouteManagerProtocol
+    associatedtype RootRouteIDManager: RootRouteIDManagerProtocol
     
-    var routeManager: RootRouteManager { get }
+    var routeIDManager: RootRouteIDManager { get }
 }

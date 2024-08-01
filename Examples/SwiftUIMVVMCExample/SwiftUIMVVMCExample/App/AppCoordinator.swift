@@ -12,14 +12,14 @@ protocol AppCoordinatorProtocol: CoordinatorProtocol {
     func goToCurrentRoute() -> View
 }
     
-final class AppCoordinator: RootCoordinator<RootRouteManager<AppRootRouteID>>, AppCoordinatorProtocol {
+final class AppCoordinator: RootCoordinator<RootRouteIDManager<AppRootRouteID>>, AppCoordinatorProtocol {
 
-    init(rootRouteManager: RootRouteManager = .init(currentRouteID: .launch)) {
-        super.init(parent: nil, routeManager: rootRouteManager)
+    init(rootRouteIDManager: RootRouteIDManager = .init(currentRouteID: .launch)) {
+        super.init(parent: nil, routeIDManager: rootRouteIDManager)
     }
     
     func goToCurrentRoute() -> some View {
-        goTo(routeID: routeManager.currentRouteID)
+        goTo(routeID: routeIDManager.currentRouteID)
     }
 
     func goTo(routeID: AppRootRouteID) -> some View {

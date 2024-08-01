@@ -8,22 +8,22 @@ extension Coordinator {
     public func goToRoot<RouteID: RootRouteID>(
         routeID: RouteID
     ) -> Bool {
-        guard let rootRouteManager: RootRouteManager<RouteID> = provideRootRouteManager() else {
+        guard let rootRouteIDManager: RootRouteIDManager<RouteID> = provideRootRouteIDManager() else {
             return false
         }
         
-        rootRouteManager.currentRouteID = routeID
+        rootRouteIDManager.currentRouteID = routeID
         
         return true
     }
     
-    func provideRootRouteManager<RouteID: RootRouteID>() -> RootRouteManager<RouteID>? {
+    func provideRootRouteIDManager<RouteID: RootRouteID>() -> RootRouteIDManager<RouteID>? {
         var coordinator: Coordinator? = self
         
         while (coordinator?.parent != nil) {
             coordinator = coordinator?.parent
         }
         
-        return (coordinator as? RootCoordinator)?.routeManager
+        return (coordinator as? RootCoordinator)?.routeIDManager
     }
 }

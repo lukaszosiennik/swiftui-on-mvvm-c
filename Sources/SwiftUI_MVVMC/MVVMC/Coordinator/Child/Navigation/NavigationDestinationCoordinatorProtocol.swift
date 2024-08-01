@@ -53,11 +53,11 @@ extension NavigationDestinationCoordinatorProtocol {
     func providePathBinding() -> Binding<NavigationPath>? {
         var coordinator: (any CoordinatorProtocol)? = self
         
-        while (coordinator != nil && !(coordinator is (any NavigationCoordinatorProtocol))) {
+        while (coordinator != nil && !(coordinator is (any NavigationStackCoordinatorProtocol))) {
             coordinator = coordinator?.parent
         }
         
-        guard let pathBinding = (coordinator as? (any NavigationCoordinatorProtocol))?.pathBinding else {
+        guard let pathBinding = (coordinator as? (any NavigationStackCoordinatorProtocol))?.pathBinding else {
             return nil
         }
         
