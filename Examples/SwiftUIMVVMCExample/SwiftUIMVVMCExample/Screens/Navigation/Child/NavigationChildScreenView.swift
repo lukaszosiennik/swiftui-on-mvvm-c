@@ -9,6 +9,8 @@ struct NavigationChildScreenView<ViewModel: NavigationChildScreenViewModel>: Vie
     
     @ObservedObject var viewModel: ViewModel
     
+    let params: Params
+    
     var body: some View {
         VStack {
             Text("NavigationChild Screen")
@@ -32,6 +34,9 @@ struct NavigationChildScreenView<ViewModel: NavigationChildScreenViewModel>: Vie
     NavigationChildScreenView(
         viewModel: NavigationChildScreenVM(
             coordinator: NavigationChildScreenCoordinator(parent: nil)
+        ),
+        params: .init(
+            number: 1
         )
     )
 }

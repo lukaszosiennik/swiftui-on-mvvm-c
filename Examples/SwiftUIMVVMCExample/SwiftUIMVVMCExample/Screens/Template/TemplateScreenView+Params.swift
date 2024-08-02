@@ -4,7 +4,7 @@
 
 extension TemplateScreenView {
  
-    struct Params: Equatable {
+    struct Params {
         
         let title: String
     }

@@ -26,6 +26,7 @@
 		B23CB5BD2C5D72A7001B498F /* TabBarScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23CB5B72C5D72A7001B498F /* TabBarScreenCoordinator.swift */; };
 		B23CB5BE2C5D72A7001B498F /* TabBarScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23CB5B82C5D72A7001B498F /* TabBarScreenView.swift */; };
 		B23CB5BF2C5D72A7001B498F /* TabBarScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23CB5B92C5D72A7001B498F /* TabBarScreenViewModel.swift */; };
+		B23CB5C12C5D838D001B498F /* NavigationChildScreenView+Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23CB5C02C5D838D001B498F /* NavigationChildScreenView+Params.swift */; };
 		B26D08F92C5791DD0094CBFB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F52C5791DD0094CBFB /* AppCoordinator.swift */; };
 		B26D08FA2C5791DE0094CBFB /* AppRootRouteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F62C5791DD0094CBFB /* AppRootRouteID.swift */; };
 		B26D08FB2C5791DE0094CBFB /* SwiftUIMVVMCExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D08F72C5791DD0094CBFB /* SwiftUIMVVMCExampleApp.swift */; };
@@ -75,6 +76,7 @@
 		B23CB5B72C5D72A7001B498F /* TabBarScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarScreenCoordinator.swift; sourceTree = "<group>"; };
 		B23CB5B82C5D72A7001B498F /* TabBarScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarScreenView.swift; sourceTree = "<group>"; };
 		B23CB5B92C5D72A7001B498F /* TabBarScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarScreenViewModel.swift; sourceTree = "<group>"; };
+		B23CB5C02C5D838D001B498F /* NavigationChildScreenView+Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationChildScreenView+Params.swift"; sourceTree = "<group>"; };
 		B26D08F52C5791DD0094CBFB /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B26D08F62C5791DD0094CBFB /* AppRootRouteID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRootRouteID.swift; sourceTree = "<group>"; };
 		B26D08F72C5791DD0094CBFB /* SwiftUIMVVMCExampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIMVVMCExampleApp.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				B2ECAC1A2C5BC2B900E8F57F /* NavigationChildScreenView.swift */,
 				B2ECAC1B2C5BC2B900E8F57F /* NavigationChildScreenViewModel.swift */,
 				B2ECAC1C2C5BC2B900E8F57F /* NavigationChildScreenCoordinator.swift */,
+				B23CB5C02C5D838D001B498F /* NavigationChildScreenView+Params.swift */,
 			);
 			path = Child;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				B26D09082C5791E80094CBFB /* LaunchScreenCoordinator.swift in Sources */,
 				B21E04242C5D0C04008E2556 /* ConfirmationDialogActionsScreenViewModel.swift in Sources */,
 				B21E04282C5D0C04008E2556 /* ModalsScreenViewModel.swift in Sources */,
+				B23CB5C12C5D838D001B498F /* NavigationChildScreenView+Params.swift in Sources */,
 				B21E04272C5D0C04008E2556 /* ModalsScreenView.swift in Sources */,
 				B23CB5BB2C5D72A7001B498F /* TabBar+Tab.swift in Sources */,
 				B23BE04C2C5AAA2F009858AB /* RootRouteIDsScreenView.swift in Sources */,
