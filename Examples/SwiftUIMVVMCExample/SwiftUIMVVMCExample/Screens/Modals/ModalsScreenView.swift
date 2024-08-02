@@ -15,27 +15,30 @@ struct ModalsScreenView<ViewModel: ModalsScreenViewModel>: View {
             Spacer().frame(height: 20)
             
             Button("GoTo Modal Sheet") {
-                viewModel.coordinator.isSheetPresented.toggle()
+                viewModel.coordinator.isPresented(routeID: .sheet).wrappedValue.toggle()
             }
-            .sheet(isPresented: $viewModel.coordinator.isSheetPresented) {
+            .sheet(isPresented: viewModel.coordinator.isPresented(routeID: .sheet)) {
                 viewModel.coordinator.goTo(routeID: .sheet)
             }
+            
             Button("GoTo Modal FullScreenCover") {
-                viewModel.coordinator.isFullScreenCoverPresented.toggle()
+                viewModel.coordinator.isPresented(routeID: .fullScreenCover).wrappedValue.toggle()
             }
-            .fullScreenCover(isPresented: $viewModel.coordinator.isFullScreenCoverPresented) {
+            .fullScreenCover(isPresented: viewModel.coordinator.isPresented(routeID: .fullScreenCover)) {
                 viewModel.coordinator.goTo(routeID: .fullScreenCover)
             }
+            
             Button("GoTo Modal Alert") {
-                viewModel.coordinator.isAlertPresented.toggle()
+                viewModel.coordinator.isPresented(routeID: .alert).wrappedValue.toggle()
             }
-            .alert("Alert Screen", isPresented: $viewModel.coordinator.isAlertPresented) {
+            .alert("Alert Screen", isPresented: viewModel.coordinator.isPresented(routeID: .alert)) {
                 viewModel.coordinator.goTo(routeID: .alert)
             }
+            
             Button("GoTo Modal ConfirmationDialog") {
-                viewModel.coordinator.isConfirmationDialogPresented.toggle()
+                viewModel.coordinator.isPresented(routeID: .confirmationDialog).wrappedValue.toggle()
             }
-            .confirmationDialog("ConfirmationDialog Screen", isPresented: $viewModel.coordinator.isConfirmationDialogPresented) {
+            .confirmationDialog("ConfirmationDialog Screen", isPresented: viewModel.coordinator.isPresented(routeID: .confirmationDialog)) {
                 viewModel.coordinator.goTo(routeID: .confirmationDialog)
             } message: {
                 Text("ConfirmationDialog Message")

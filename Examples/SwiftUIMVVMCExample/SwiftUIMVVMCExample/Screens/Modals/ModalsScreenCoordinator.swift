@@ -5,24 +5,32 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-protocol ModalsScreenCoordinating: Coordinating {
-    
-    associatedtype View: SwiftUI.View
-    
-    var isSheetPresented: Bool { get set }
-    var isFullScreenCoverPresented: Bool { get set }
-    var isAlertPresented: Bool { get set }
-    var isConfirmationDialogPresented: Bool { get set }
-    
-    func goTo(routeID: ModalsScreenModalRouteID) -> View
-}
+protocol ModalsScreenCoordinating: ModalCoordinating 
+where RouteID == ModalsScreenModalRouteID {}
 
 final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
     
-    @Published var isSheetPresented: Bool = false
-    @Published var isFullScreenCoverPresented: Bool = false
-    @Published var isAlertPresented: Bool = false
-    @Published var isConfirmationDialogPresented: Bool = false
+    @Published 
+    var isSheetPresented: Bool = false
+    @Published 
+    var isFullScreenCoverPresented: Bool = false
+    @Published 
+    var isAlertPresented: Bool = false
+    @Published 
+    var isConfirmationDialogPresented: Bool = false
+    
+    func isPresented(routeID: ModalsScreenModalRouteID) -> Binding<Bool> {
+        switch routeID {
+        case .sheet:
+            isPresented(keyPath: \Self.isSheetPresented)
+        case .fullScreenCover:
+            isPresented(keyPath: \Self.isFullScreenCoverPresented)
+        case .alert:
+            isPresented(keyPath: \Self.isAlertPresented)
+        case .confirmationDialog:
+            isPresented(keyPath: \Self.isConfirmationDialogPresented)
+        }
+    }
         
     func goTo(routeID: ModalsScreenModalRouteID) -> some View {
         Group {

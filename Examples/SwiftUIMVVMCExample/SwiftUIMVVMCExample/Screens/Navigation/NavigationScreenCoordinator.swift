@@ -5,7 +5,8 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-protocol NavigationScreenCoordinating: NavigationStackCoordinating {}
+protocol NavigationScreenCoordinating: NavigationStackCoordinating
+where RouteID == NavigationScreenNavigationRouteID {}
 
 final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinating {
 
