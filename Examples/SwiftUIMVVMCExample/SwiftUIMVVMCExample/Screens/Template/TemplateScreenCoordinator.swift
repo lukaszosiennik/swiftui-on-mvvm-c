@@ -4,6 +4,6 @@
 
 import SwiftUI_MVVMC
 
-protocol TemplateScreenCoordinatorProtocol: CoordinatorProtocol {}
+protocol TemplateScreenCoordinating: Coordinating {}
 
-final class TemplateScreenCoordinator: Coordinator, TemplateScreenCoordinatorProtocol {}
+final class TemplateScreenCoordinator: Coordinator, TemplateScreenCoordinating {}

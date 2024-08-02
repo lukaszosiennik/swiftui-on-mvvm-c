@@ -5,7 +5,7 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-struct NavigationChildScreenView<ViewModel: NavigationChildScreenViewModelProtocol>: View {
+struct NavigationChildScreenView<ViewModel: NavigationChildScreenViewModel>: View {
     
     @ObservedObject var viewModel: ViewModel
     
@@ -30,7 +30,7 @@ struct NavigationChildScreenView<ViewModel: NavigationChildScreenViewModelProtoc
 
 #Preview {
     NavigationChildScreenView(
-        viewModel: NavigationChildScreenViewModel(
+        viewModel: NavigationChildScreenVM(
             coordinator: NavigationChildScreenCoordinator(parent: nil)
         )
     )

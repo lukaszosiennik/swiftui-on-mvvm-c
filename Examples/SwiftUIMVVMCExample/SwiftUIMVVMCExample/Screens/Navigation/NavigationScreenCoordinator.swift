@@ -5,16 +5,16 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-protocol NavigationScreenCoordinatorProtocol: NavigationStackCoordinatorProtocol {}
+protocol NavigationScreenCoordinating: NavigationStackCoordinating {}
 
-final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinatorProtocol {
+final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinating {
 
     @Published
     var pathRaw: NavigationPath = .init()
     
     func goToRoot() -> some View {
         NavigationRootScreenView(
-            viewModel: NavigationRootScreenViewModel(
+            viewModel: NavigationRootScreenVM(
                 coordinator: NavigationRootScreenCoordinator(parent: self)
             )
         )
@@ -29,22 +29,24 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinato
                 goToNavigationChildScreen()
             case .third:
                 goToRootRouteIDsScreen()
+            case .fourth:
+                goToModalsScreen()
             }
         }
     }
     
     func goToTemplateScreen(with routeID: RouteID) -> some View {
         TemplateScreenView(
-            viewModel: TemplateScreenViewModel(
+            viewModel: TemplateScreenVM(
                 coordinator: TemplateScreenCoordinator(parent: self)
             ),
-            params: .init(for: routeID)
+            params: .init(forNavigation: routeID)
         )
     }
     
     func goToNavigationChildScreen() -> some View {
         NavigationChildScreenView(
-            viewModel: NavigationChildScreenViewModel(
+            viewModel: NavigationChildScreenVM(
                 coordinator: NavigationChildScreenCoordinator(parent: self)
             )
         )
@@ -52,13 +54,21 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinato
     
     func goToRootRouteIDsScreen() -> some View {
         RootRouteIDsScreenView(
-            viewModel: RootRouteIDsScreenViewModel(
+            viewModel: RootRouteIDsScreenVM(
                 coordinator: RootRouteIDsScreenCoordinator(
                     parent: self
                 )
             ),
             params: .init(
                 excludedRouteID: .home
+            )
+        )
+    }
+    
+    func goToModalsScreen() -> some View {
+        ModalsScreenView(
+            viewModel: ModalsScreenVM(
+                coordinator: ModalsScreenCoordinator(parent: self)
             )
         )
     }

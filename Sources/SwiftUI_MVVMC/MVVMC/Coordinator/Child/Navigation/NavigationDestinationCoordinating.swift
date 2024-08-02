@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-public protocol NavigationDestinationCoordinatorProtocol: CoordinatorProtocol {
+public protocol NavigationDestinationCoordinating: Coordinating {
     
     associatedtype RouteID: NavigationRouteID
     
@@ -18,7 +18,7 @@ public protocol NavigationDestinationCoordinatorProtocol: CoordinatorProtocol {
     func clearPath() -> Bool
 }
 
-extension NavigationDestinationCoordinatorProtocol {
+extension NavigationDestinationCoordinating {
     
     public func addToPath(routeID: RouteID) -> Bool {
         guard let pathBinding = providePathBinding() else {
@@ -51,13 +51,13 @@ extension NavigationDestinationCoordinatorProtocol {
     }
     
     func providePathBinding() -> Binding<NavigationPath>? {
-        var coordinator: (any CoordinatorProtocol)? = self
+        var coordinator: (any Coordinating)? = self
         
-        while (coordinator != nil && !(coordinator is (any NavigationStackCoordinatorProtocol))) {
+        while (coordinator != nil && !(coordinator is (any NavigationStackCoordinating))) {
             coordinator = coordinator?.parent
         }
         
-        guard let pathBinding = (coordinator as? (any NavigationStackCoordinatorProtocol))?.pathBinding else {
+        guard let pathBinding = (coordinator as? (any NavigationStackCoordinating))?.pathBinding else {
             return nil
         }
         

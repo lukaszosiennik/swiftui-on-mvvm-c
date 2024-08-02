@@ -5,7 +5,7 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-struct NavigationRootScreenView<ViewModel: NavigationRootScreenViewModelProtocol>: View {
+struct NavigationRootScreenView<ViewModel: NavigationRootScreenViewModel>: View {
 
     @ObservedObject var viewModel: ViewModel
 
@@ -15,10 +15,10 @@ struct NavigationRootScreenView<ViewModel: NavigationRootScreenViewModelProtocol
             
             Spacer().frame(height: 20)
             
-            Button("Button GoTo First") {
+            Button("Button GoTo Template") {
                 viewModel.coordinator.addToPath(routeID: ViewModel.Coordinator.RouteID.first)
             }
-            Button("Button GoTo Second") {
+            Button("Button GoTo NavigationChild") {
                 viewModel.coordinator.addToPath(routeID: ViewModel.Coordinator.RouteID.second)
             }
             Button("Button GoTo RootRouteIDs") {
@@ -27,14 +27,8 @@ struct NavigationRootScreenView<ViewModel: NavigationRootScreenViewModelProtocol
             
             Spacer().frame(height: 20)
             
-            NavigationLink(value: ViewModel.Coordinator.RouteID.first) {
-                Text("Link GoTo First")
-            }
-            NavigationLink(value: ViewModel.Coordinator.RouteID.second) {
-                Text("Link GoTo Second")
-            }
-            NavigationLink(value: ViewModel.Coordinator.RouteID.third) {
-                Text("Link GoTo RootRouteIDs")
+            NavigationLink(value: ViewModel.Coordinator.RouteID.fourth) {
+                Text("Link GoTo Modals")
             }
         }
     }
@@ -42,7 +36,7 @@ struct NavigationRootScreenView<ViewModel: NavigationRootScreenViewModelProtocol
 
 #Preview {
     NavigationRootScreenView(
-        viewModel: NavigationRootScreenViewModel(
+        viewModel: NavigationRootScreenVM(
             coordinator: NavigationRootScreenCoordinator(parent: nil)
         )
     )

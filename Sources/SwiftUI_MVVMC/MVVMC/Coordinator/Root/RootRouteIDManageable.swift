@@ -4,7 +4,7 @@
 
 import Combine
 
-public protocol RootRouteIDManagerProtocol: AnyObject, ObservableObject {
+public protocol RootRouteIDManageable: AnyObject, ObservableObject {
     
     associatedtype RouteID: RootRouteID
     

@@ -24,6 +24,6 @@ extension Coordinator {
             coordinator = coordinator?.parent
         }
         
-        return (coordinator as? RootCoordinator)?.routeIDManager
+        return (coordinator as? TransmittingRootCoordinator)?.routeIDManager
     }
 }

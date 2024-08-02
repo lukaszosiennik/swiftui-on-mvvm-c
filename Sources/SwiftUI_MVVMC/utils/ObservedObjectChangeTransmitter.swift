@@ -4,13 +4,13 @@
 
 import Combine
 
-protocol ObservedObjectChangeTransmitterProtocol: AnyObject, ObservableObject
+protocol ObservedObjectChangeTransmitter: AnyObject, ObservableObject
 where Self.ObjectWillChangePublisher == ObservableObjectPublisher {
     
     var transmissionSubscription: AnyCancellable? { get set }
 }
 
-extension ObservedObjectChangeTransmitterProtocol {
+extension ObservedObjectChangeTransmitter {
     
     func initiateTransmission<Object: ObservableObject>(for object: Object) {
         transmissionSubscription = object

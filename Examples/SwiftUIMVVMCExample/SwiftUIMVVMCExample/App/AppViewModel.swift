@@ -4,9 +4,9 @@
 
 import SwiftUI_MVVMC
 
-protocol AppViewModelProtocol: ViewModelProtocol
-where Coordinator: AppCoordinatorProtocol {}
+protocol AppViewModel: ViewModel
+where Coordinator: AppCoordinating {}
 
-final class AppViewModel<
-    Coordinator: AppCoordinatorProtocol
->: ViewModel<Coordinator>, AppViewModelProtocol {}
+final class AppVM<
+    Coordinator: AppCoordinating
+>: TransmittingVM<Coordinator>, AppViewModel {}

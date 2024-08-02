@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-public protocol NavigationStackCoordinatorProtocol: CoordinatorProtocol {
+public protocol NavigationStackCoordinating: Coordinating {
     
     associatedtype RootView: SwiftUI.View
     associatedtype DestinationView: SwiftUI.View
@@ -18,7 +18,7 @@ public protocol NavigationStackCoordinatorProtocol: CoordinatorProtocol {
     func goTo(routeID: RouteID) -> DestinationView
 }
 
-extension NavigationStackCoordinatorProtocol {
+extension NavigationStackCoordinating {
     
     public var pathBinding: Binding<NavigationPath> {
         .init(get: { [weak self] in

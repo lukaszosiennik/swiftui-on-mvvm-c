@@ -5,14 +5,14 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-protocol AppCoordinatorProtocol: CoordinatorProtocol {
+protocol AppCoordinating: Coordinating {
     
     associatedtype View: SwiftUI.View
     
     func goToCurrentRoute() -> View
 }
     
-final class AppCoordinator: RootCoordinator<RootRouteIDManager<AppRootRouteID>>, AppCoordinatorProtocol {
+final class AppCoordinator: TransmittingRootCoordinator<RootRouteIDManager<AppRootRouteID>>, AppCoordinating {
 
     init(rootRouteIDManager: RootRouteIDManager = .init(currentRouteID: .launch)) {
         super.init(parent: nil, routeIDManager: rootRouteIDManager)
@@ -37,7 +37,7 @@ final class AppCoordinator: RootCoordinator<RootRouteIDManager<AppRootRouteID>>,
     
     func goToLaunchScreen() -> some View {
         LaunchScreenView(
-            viewModel: LaunchScreenViewModel(
+            viewModel: LaunchScreenVM(
                 coordinator: LaunchScreenCoordinator(
                     parent: self
                 )
@@ -47,7 +47,7 @@ final class AppCoordinator: RootCoordinator<RootRouteIDManager<AppRootRouteID>>,
     
     func goToRootRouteIDsScreen() -> some View {
         RootRouteIDsScreenView(
-            viewModel: RootRouteIDsScreenViewModel(
+            viewModel: RootRouteIDsScreenVM(
                 coordinator: RootRouteIDsScreenCoordinator(
                     parent: self
                 )
@@ -60,7 +60,7 @@ final class AppCoordinator: RootCoordinator<RootRouteIDManager<AppRootRouteID>>,
     
     func goToHomeScreen() -> some View {
         NavigationScreenView(
-            viewModel: NavigationScreenViewModel(
+            viewModel: NavigationScreenVM(
                 coordinator: NavigationScreenCoordinator(
                     parent: self
                 )

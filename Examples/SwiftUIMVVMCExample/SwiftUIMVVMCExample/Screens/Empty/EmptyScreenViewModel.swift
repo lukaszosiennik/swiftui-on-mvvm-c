@@ -4,9 +4,9 @@
 
 import SwiftUI_MVVMC
 
-protocol EmptyScreenViewModelProtocol: ViewModelProtocol
-where Coordinator: EmptyScreenCoordinatorProtocol {}
+protocol EmptyScreenViewModel: ViewModel
+where Coordinator: EmptyScreenCoordinating {}
 
-final class EmptyScreenViewModel<
-    Coordinator: EmptyScreenCoordinatorProtocol
->: ViewModel<Coordinator>, EmptyScreenViewModelProtocol {}
+final class EmptyScreenVM<
+    Coordinator: EmptyScreenCoordinating
+>: TransmittingVM<Coordinator>, EmptyScreenViewModel {}

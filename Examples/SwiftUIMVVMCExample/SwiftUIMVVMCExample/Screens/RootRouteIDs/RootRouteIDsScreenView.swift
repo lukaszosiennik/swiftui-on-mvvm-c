@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct RootRouteIDsScreenView<ViewModel: RootRouteIDsScreenViewModelProtocol>: View {
+struct RootRouteIDsScreenView<ViewModel: RootRouteIDsScreenViewModel>: View {
     
     @ObservedObject var viewModel: ViewModel
     
@@ -40,7 +40,7 @@ struct RootRouteIDsScreenView<ViewModel: RootRouteIDsScreenViewModelProtocol>: V
 
 #Preview {
     RootRouteIDsScreenView(
-        viewModel: RootRouteIDsScreenViewModel(
+        viewModel: RootRouteIDsScreenVM(
             coordinator: RootRouteIDsScreenCoordinator(parent: nil)
         ),
         params: .init(

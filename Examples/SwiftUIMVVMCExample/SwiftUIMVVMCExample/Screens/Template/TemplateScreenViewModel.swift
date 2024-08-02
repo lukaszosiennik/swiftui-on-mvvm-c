@@ -4,9 +4,9 @@
 
 import SwiftUI_MVVMC
 
-protocol TemplateScreenViewModelProtocol: ViewModelProtocol
-where Coordinator: TemplateScreenCoordinatorProtocol {}
+protocol TemplateScreenViewModel: ViewModel
+where Coordinator: TemplateScreenCoordinating {}
 
-final class TemplateScreenViewModel<
-    Coordinator: TemplateScreenCoordinatorProtocol
->: ViewModel<Coordinator>, TemplateScreenViewModelProtocol {}
+final class TemplateScreenVM<
+    Coordinator: TemplateScreenCoordinating
+>: TransmittingVM<Coordinator>, TemplateScreenViewModel {}

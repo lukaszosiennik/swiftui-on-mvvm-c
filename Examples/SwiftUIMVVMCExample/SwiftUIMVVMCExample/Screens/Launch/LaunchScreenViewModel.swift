@@ -4,9 +4,9 @@
 
 import SwiftUI_MVVMC
 
-protocol LaunchScreenViewModelProtocol: ViewModelProtocol
-where Coordinator: LaunchScreenCoordinatorProtocol {}
+protocol LaunchScreenViewModel: ViewModel
+where Coordinator: LaunchScreenCoordinating {}
 
-final class LaunchScreenViewModel<
-    Coordinator: LaunchScreenCoordinatorProtocol
->: ViewModel<Coordinator>, LaunchScreenViewModelProtocol {}
+final class LaunchScreenVM<
+    Coordinator: LaunchScreenCoordinating
+>: TransmittingVM<Coordinator>, LaunchScreenViewModel {}

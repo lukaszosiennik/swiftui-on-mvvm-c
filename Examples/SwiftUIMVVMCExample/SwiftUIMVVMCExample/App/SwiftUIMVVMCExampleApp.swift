@@ -7,7 +7,7 @@ import SwiftUI
 @main
 struct SwiftUIMVVMCExampleApp: App {
     
-    typealias ViewModel = AppViewModel<AppCoordinator>
+    typealias ViewModel = AppVM<AppCoordinator>
 
     @ObservedObject
     var viewModel: ViewModel

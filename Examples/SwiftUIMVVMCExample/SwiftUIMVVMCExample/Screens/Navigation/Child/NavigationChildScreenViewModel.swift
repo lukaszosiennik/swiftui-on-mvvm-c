@@ -4,9 +4,9 @@
 
 import SwiftUI_MVVMC
 
-protocol NavigationChildScreenViewModelProtocol: ViewModelProtocol
-where Coordinator: NavigationChildScreenCoordinatorProtocol {}
+protocol NavigationChildScreenViewModel: ViewModel
+where Coordinator: NavigationChildScreenCoordinating {}
 
-final class NavigationChildScreenViewModel<
-    Coordinator: NavigationChildScreenCoordinatorProtocol
->: ViewModel<Coordinator>, NavigationChildScreenViewModelProtocol {}
+final class NavigationChildScreenVM<
+    Coordinator: NavigationChildScreenCoordinating
+>: TransmittingVM<Coordinator>, NavigationChildScreenViewModel {}

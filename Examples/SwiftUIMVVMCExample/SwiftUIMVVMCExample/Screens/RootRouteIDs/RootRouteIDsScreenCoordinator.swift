@@ -4,10 +4,10 @@
 
 import SwiftUI_MVVMC
 
-protocol RootRouteIDsScreenCoordinatorProtocol: CoordinatorProtocol {
+protocol RootRouteIDsScreenCoordinating: Coordinating {
     
     @discardableResult
     func goToRoot(routeID: AppRootRouteID) -> Bool
 }
 
-final class RootRouteIDsScreenCoordinator: Coordinator, RootRouteIDsScreenCoordinatorProtocol {}
+final class RootRouteIDsScreenCoordinator: Coordinator, RootRouteIDsScreenCoordinating {}

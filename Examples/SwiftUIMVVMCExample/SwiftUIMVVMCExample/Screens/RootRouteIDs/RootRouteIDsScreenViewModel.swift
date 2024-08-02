@@ -4,9 +4,9 @@
 
 import SwiftUI_MVVMC
 
-protocol RootRouteIDsScreenViewModelProtocol: ViewModelProtocol
-where Coordinator: RootRouteIDsScreenCoordinatorProtocol {}
+protocol RootRouteIDsScreenViewModel: ViewModel
+where Coordinator: RootRouteIDsScreenCoordinating {}
 
-final class RootRouteIDsScreenViewModel<
-    Coordinator: RootRouteIDsScreenCoordinatorProtocol
->: ViewModel<Coordinator>, RootRouteIDsScreenViewModelProtocol {}
+final class RootRouteIDsScreenVM<
+    Coordinator: RootRouteIDsScreenCoordinating
+>: TransmittingVM<Coordinator>, RootRouteIDsScreenViewModel {}

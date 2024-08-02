@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct LaunchScreenView<ViewModel: LaunchScreenViewModelProtocol>: View {
+struct LaunchScreenView<ViewModel: LaunchScreenViewModel>: View {
 
     @ObservedObject 
     var viewModel: ViewModel
@@ -21,7 +21,7 @@ struct LaunchScreenView<ViewModel: LaunchScreenViewModelProtocol>: View {
 
 #Preview {
     LaunchScreenView(
-        viewModel: LaunchScreenViewModel(
+        viewModel: LaunchScreenVM(
             coordinator: LaunchScreenCoordinator(parent: nil)
         )
     )

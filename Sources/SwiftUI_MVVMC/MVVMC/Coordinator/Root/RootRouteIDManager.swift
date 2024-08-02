@@ -6,7 +6,7 @@ import Combine
 
 public final class RootRouteIDManager<
     RouteID: RootRouteID
->: RootRouteIDManagerProtocol {
+>: RootRouteIDManageable {
 
     @Published 
     public var currentRouteID: RouteID

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B21E041F2C5D0C04008E2556 /* AlertActionsScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E04112C5D0C03008E2556 /* AlertActionsScreenCoordinator.swift */; };
+		B21E04202C5D0C04008E2556 /* AlertActionsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E04122C5D0C03008E2556 /* AlertActionsScreenView.swift */; };
+		B21E04212C5D0C04008E2556 /* AlertActionsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E04132C5D0C03008E2556 /* AlertActionsScreenViewModel.swift */; };
+		B21E04222C5D0C04008E2556 /* ConfirmationDialogActionsScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E04152C5D0C04008E2556 /* ConfirmationDialogActionsScreenCoordinator.swift */; };
+		B21E04232C5D0C04008E2556 /* ConfirmationDialogActionsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E04162C5D0C04008E2556 /* ConfirmationDialogActionsScreenView.swift */; };
+		B21E04242C5D0C04008E2556 /* ConfirmationDialogActionsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E04172C5D0C04008E2556 /* ConfirmationDialogActionsScreenViewModel.swift */; };
+		B21E04252C5D0C04008E2556 /* ModalsScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E04192C5D0C04008E2556 /* ModalsScreenCoordinator.swift */; };
+		B21E04262C5D0C04008E2556 /* ModalsScreenModalRouteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E041A2C5D0C04008E2556 /* ModalsScreenModalRouteID.swift */; };
+		B21E04272C5D0C04008E2556 /* ModalsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E041B2C5D0C04008E2556 /* ModalsScreenView.swift */; };
+		B21E04282C5D0C04008E2556 /* ModalsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E041C2C5D0C04008E2556 /* ModalsScreenViewModel.swift */; };
 		B23BE04B2C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BE0462C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift */; };
 		B23BE04C2C5AAA2F009858AB /* RootRouteIDsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BE0472C5AAA2F009858AB /* RootRouteIDsScreenView.swift */; };
 		B23BE04D2C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BE0482C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift */; };
@@ -41,6 +51,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B21E04112C5D0C03008E2556 /* AlertActionsScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionsScreenCoordinator.swift; sourceTree = "<group>"; };
+		B21E04122C5D0C03008E2556 /* AlertActionsScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionsScreenView.swift; sourceTree = "<group>"; };
+		B21E04132C5D0C03008E2556 /* AlertActionsScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionsScreenViewModel.swift; sourceTree = "<group>"; };
+		B21E04152C5D0C04008E2556 /* ConfirmationDialogActionsScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogActionsScreenCoordinator.swift; sourceTree = "<group>"; };
+		B21E04162C5D0C04008E2556 /* ConfirmationDialogActionsScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogActionsScreenView.swift; sourceTree = "<group>"; };
+		B21E04172C5D0C04008E2556 /* ConfirmationDialogActionsScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogActionsScreenViewModel.swift; sourceTree = "<group>"; };
+		B21E04192C5D0C04008E2556 /* ModalsScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalsScreenCoordinator.swift; sourceTree = "<group>"; };
+		B21E041A2C5D0C04008E2556 /* ModalsScreenModalRouteID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalsScreenModalRouteID.swift; sourceTree = "<group>"; };
+		B21E041B2C5D0C04008E2556 /* ModalsScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalsScreenView.swift; sourceTree = "<group>"; };
+		B21E041C2C5D0C04008E2556 /* ModalsScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalsScreenViewModel.swift; sourceTree = "<group>"; };
 		B23BE0462C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouteIDsScreenCoordinator.swift; sourceTree = "<group>"; };
 		B23BE0472C5AAA2F009858AB /* RootRouteIDsScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouteIDsScreenView.swift; sourceTree = "<group>"; };
 		B23BE0482C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootRouteIDsScreenView+Params.swift"; sourceTree = "<group>"; };
@@ -87,6 +107,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B21E04142C5D0C03008E2556 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				B21E04122C5D0C03008E2556 /* AlertActionsScreenView.swift */,
+				B21E04132C5D0C03008E2556 /* AlertActionsScreenViewModel.swift */,
+				B21E04112C5D0C03008E2556 /* AlertActionsScreenCoordinator.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		B21E04182C5D0C04008E2556 /* ConfirmationDialog */ = {
+			isa = PBXGroup;
+			children = (
+				B21E04162C5D0C04008E2556 /* ConfirmationDialogActionsScreenView.swift */,
+				B21E04172C5D0C04008E2556 /* ConfirmationDialogActionsScreenViewModel.swift */,
+				B21E04152C5D0C04008E2556 /* ConfirmationDialogActionsScreenCoordinator.swift */,
+			);
+			path = ConfirmationDialog;
+			sourceTree = "<group>";
+		};
+		B21E041E2C5D0C04008E2556 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				B21E041B2C5D0C04008E2556 /* ModalsScreenView.swift */,
+				B21E041C2C5D0C04008E2556 /* ModalsScreenViewModel.swift */,
+				B21E04192C5D0C04008E2556 /* ModalsScreenCoordinator.swift */,
+				B21E041A2C5D0C04008E2556 /* ModalsScreenModalRouteID.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
 		B23BE04A2C5AAA2F009858AB /* RootRouteIDs */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +166,9 @@
 				B23BE04A2C5AAA2F009858AB /* RootRouteIDs */,
 				B26D09042C5791E80094CBFB /* Launch */,
 				B277746B2C5A7E55003BC0BD /* Navigation */,
+				B21E041E2C5D0C04008E2556 /* Modals */,
+				B21E04142C5D0C03008E2556 /* Alert */,
+				B21E04182C5D0C04008E2556 /* ConfirmationDialog */,
 				B27774732C5A7FBE003BC0BD /* Template */,
 				B26D09002C5791E80094CBFB /* Empty */,
 			);
@@ -305,11 +359,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B277747E2C5A842E003BC0BD /* NavigationScreenNavigationRouteID.swift in Sources */,
+				B21E041F2C5D0C04008E2556 /* AlertActionsScreenCoordinator.swift in Sources */,
 				B277746E2C5A7E8F003BC0BD /* NavigationRootScreenView.swift in Sources */,
 				B26D08FA2C5791DE0094CBFB /* AppRootRouteID.swift in Sources */,
 				B27774762C5A7FE3003BC0BD /* TemplateScreenView.swift in Sources */,
 				B23BE04E2C5AAA2F009858AB /* RootRouteIDsScreenViewModel.swift in Sources */,
 				B23BE04D2C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift in Sources */,
+				B21E04202C5D0C04008E2556 /* AlertActionsScreenView.swift in Sources */,
 				B27774702C5A7EA5003BC0BD /* NavigationRootScreenViewModel.swift in Sources */,
 				B26D09072C5791E80094CBFB /* EmptyScreenViewModel.swift in Sources */,
 				B27774822C5A85FA003BC0BD /* NavigationScreenViewModel.swift in Sources */,
@@ -318,18 +374,26 @@
 				B277747C2C5A801A003BC0BD /* TemplateScreenView+Params.swift in Sources */,
 				B27774842C5A8605003BC0BD /* NavigationScreenCoordinator.swift in Sources */,
 				B27774802C5A85F3003BC0BD /* NavigationScreenView.swift in Sources */,
+				B21E04212C5D0C04008E2556 /* AlertActionsScreenViewModel.swift in Sources */,
 				B2ECAC1F2C5BC2B900E8F57F /* NavigationChildScreenCoordinator.swift in Sources */,
 				B26D09082C5791E80094CBFB /* LaunchScreenCoordinator.swift in Sources */,
+				B21E04242C5D0C04008E2556 /* ConfirmationDialogActionsScreenViewModel.swift in Sources */,
+				B21E04282C5D0C04008E2556 /* ModalsScreenViewModel.swift in Sources */,
+				B21E04272C5D0C04008E2556 /* ModalsScreenView.swift in Sources */,
 				B23BE04C2C5AAA2F009858AB /* RootRouteIDsScreenView.swift in Sources */,
 				B26D08FC2C5791DE0094CBFB /* AppViewModel.swift in Sources */,
 				B23BE04B2C5AAA2F009858AB /* RootRouteIDsScreenCoordinator.swift in Sources */,
 				B2ECAC1E2C5BC2B900E8F57F /* NavigationChildScreenViewModel.swift in Sources */,
 				B26D090A2C5791E80094CBFB /* LaunchScreenViewModel.swift in Sources */,
+				B21E04232C5D0C04008E2556 /* ConfirmationDialogActionsScreenView.swift in Sources */,
+				B21E04262C5D0C04008E2556 /* ModalsScreenModalRouteID.swift in Sources */,
 				B27774722C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift in Sources */,
+				B21E04222C5D0C04008E2556 /* ConfirmationDialogActionsScreenCoordinator.swift in Sources */,
 				B26D09062C5791E80094CBFB /* EmptyScreenView.swift in Sources */,
 				B26D08F92C5791DD0094CBFB /* AppCoordinator.swift in Sources */,
 				B2ECAC1D2C5BC2B900E8F57F /* NavigationChildScreenView.swift in Sources */,
 				B277747A2C5A7FFE003BC0BD /* TemplateScreenCoordinator.swift in Sources */,
+				B21E04252C5D0C04008E2556 /* ModalsScreenCoordinator.swift in Sources */,
 				B26D09092C5791E80094CBFB /* LaunchScreenView.swift in Sources */,
 				B26D09052C5791E80094CBFB /* EmptyScreenCoordinator.swift in Sources */,
 			);
@@ -465,6 +529,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMVVMCExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -493,6 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMVVMCExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

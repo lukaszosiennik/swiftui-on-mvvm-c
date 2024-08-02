@@ -5,10 +5,10 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-protocol NavigationRootScreenCoordinatorProtocol: NavigationDestinationCoordinatorProtocol 
+protocol NavigationRootScreenCoordinating: NavigationDestinationCoordinating
 where RouteID == NavigationScreenNavigationRouteID {}
 
-final class NavigationRootScreenCoordinator: Coordinator, NavigationRootScreenCoordinatorProtocol {
+final class NavigationRootScreenCoordinator: Coordinator, NavigationRootScreenCoordinating {
     
     let allowedRouteIDs: NavigationScreenAllowedNavigationRouteIDs = .init(
         values: .init(RouteID.allCases)

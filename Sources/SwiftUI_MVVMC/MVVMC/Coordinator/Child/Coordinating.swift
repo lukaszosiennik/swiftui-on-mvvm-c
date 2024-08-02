@@ -4,9 +4,9 @@
 
 import Foundation
 
-public protocol CoordinatorProtocol: AnyObject, ObservableObject {
+public protocol Coordinating: AnyObject, ObservableObject {
     
-    associatedtype Coordinator: CoordinatorProtocol
+    associatedtype Coordinator: Coordinating
     
     var parent: Coordinator? { get }
 }

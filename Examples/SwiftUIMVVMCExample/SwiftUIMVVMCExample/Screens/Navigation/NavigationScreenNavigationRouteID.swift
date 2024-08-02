@@ -9,6 +9,7 @@ enum NavigationScreenNavigationRouteID: CaseIterable, NavigationRouteID {
     case first
     case second
     case third
+    case fourth
 }
 
 struct NavigationScreenAllowedNavigationRouteIDs {

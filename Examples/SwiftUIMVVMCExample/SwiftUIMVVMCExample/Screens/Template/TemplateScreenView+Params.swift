@@ -12,7 +12,7 @@ extension TemplateScreenView {
 
 extension TemplateScreenView.Params {
     
-    init(for routeID: NavigationScreenNavigationRouteID) {
+    init(forNavigation routeID: NavigationScreenNavigationRouteID) {
         self = {
             switch routeID {
             case .first:
@@ -20,7 +20,27 @@ extension TemplateScreenView.Params {
             case .second:
                 .init(title: "NavigationStack Second")
             case .third:
-                .init(title: "NavigationStack RootRouteIDs")
+                .init(title: "NavigationStack Third")
+            case .fourth:
+                .init(title: "NavigationStack Fourth")
+            }
+        }()
+    }
+}
+
+extension TemplateScreenView.Params {
+    
+    init(forModal routeID: ModalsScreenModalRouteID) {
+        self = {
+            switch routeID {
+            case .sheet:
+                .init(title: "Sheet")
+            case .fullScreenCover:
+                .init(title: "FullScreenCover")
+            case .alert:
+                .init(title: "Alert")
+            case .confirmationDialog:
+                .init(title: "ConfirmationDialog")
             }
         }()
     }

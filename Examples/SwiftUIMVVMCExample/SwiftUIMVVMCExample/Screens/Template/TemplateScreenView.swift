@@ -5,7 +5,7 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-struct TemplateScreenView<ViewModel: TemplateScreenViewModelProtocol>: View {
+struct TemplateScreenView<ViewModel: TemplateScreenViewModel>: View {
     
     @ObservedObject var viewModel: ViewModel
     
@@ -20,7 +20,7 @@ struct TemplateScreenView<ViewModel: TemplateScreenViewModelProtocol>: View {
 
 #Preview {
     TemplateScreenView(
-        viewModel: TemplateScreenViewModel(
+        viewModel: TemplateScreenVM(
             coordinator: TemplateScreenCoordinator(parent: nil)
         ),
         params: .init(title: "")

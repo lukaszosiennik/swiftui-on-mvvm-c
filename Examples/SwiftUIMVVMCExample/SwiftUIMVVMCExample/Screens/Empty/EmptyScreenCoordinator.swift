@@ -4,6 +4,6 @@
 
 import SwiftUI_MVVMC
 
-protocol EmptyScreenCoordinatorProtocol: CoordinatorProtocol {}
+protocol EmptyScreenCoordinating: Coordinating {}
 
-final class EmptyScreenCoordinator: Coordinator, EmptyScreenCoordinatorProtocol {}
+final class EmptyScreenCoordinator: Coordinator, EmptyScreenCoordinating {}

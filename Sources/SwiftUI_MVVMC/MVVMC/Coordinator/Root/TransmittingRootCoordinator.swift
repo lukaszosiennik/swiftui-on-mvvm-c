@@ -5,9 +5,9 @@
 import Combine
 import SwiftUI
 
-open class RootCoordinator<
-    RootRouteIDManager: RootRouteIDManagerProtocol
->: Coordinator, RootCoordinatorProtocol, ObservedObjectChangeTransmitterProtocol {
+open class TransmittingRootCoordinator<
+    RootRouteIDManager: RootRouteIDManageable
+>: Coordinator, RootCoordinating, ObservedObjectChangeTransmitter {
 
     @ObservedObject
     public private(set) var routeIDManager: RootRouteIDManager
