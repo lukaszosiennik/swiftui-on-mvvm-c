@@ -49,6 +49,9 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinati
         NavigationChildScreenView(
             viewModel: NavigationChildScreenVM(
                 coordinator: NavigationChildScreenCoordinator(parent: self)
+            ),
+            params: .init(
+                number: 0
             )
         )
     }

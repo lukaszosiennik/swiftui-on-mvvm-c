@@ -4,24 +4,24 @@
 
 import SwiftUI
 
-public protocol NavigationDestinationCoordinating: Coordinating {
+public protocol NavigationPathCoordinating: Coordinating {
     
     associatedtype RouteID: NavigationRouteID
     
     @discardableResult
-    func addToPath(routeID: RouteID) -> Bool
+    func navigationPathAppend(_ routeID: RouteID) -> Bool
     
     @discardableResult
-    func removeFromPath(segmentCount: Int) -> Bool
+    func navigationPathRemoveLast(_ segmentCount: Int) -> Bool
     
     @discardableResult
-    func clearPath() -> Bool
+    func navigationPathClear() -> Bool
 }
 
-extension NavigationDestinationCoordinating {
+extension NavigationPathCoordinating {
     
-    public func addToPath(routeID: RouteID) -> Bool {
-        guard let pathBinding = providePathBinding() else {
+    public func navigationPathAppend(_ routeID: RouteID) -> Bool {
+        guard let pathBinding = navigationPathBinding() else {
             return false
         }
         
@@ -30,8 +30,8 @@ extension NavigationDestinationCoordinating {
         return true
     }
     
-    public func removeFromPath(segmentCount: Int) -> Bool {
-        guard let pathBinding = providePathBinding() else {
+    public func navigationPathRemoveLast(_ segmentCount: Int) -> Bool {
+        guard let pathBinding = navigationPathBinding() else {
             return false
         }
         
@@ -40,8 +40,8 @@ extension NavigationDestinationCoordinating {
         return true
     }
     
-    public func clearPath() -> Bool {
-        guard let pathBinding = providePathBinding() else {
+    public func navigationPathClear() -> Bool {
+        guard let pathBinding = navigationPathBinding() else {
             return false
         }
         
@@ -50,7 +50,7 @@ extension NavigationDestinationCoordinating {
         return true
     }
     
-    func providePathBinding() -> Binding<NavigationPath>? {
+    func navigationPathBinding() -> Binding<NavigationPath>? {
         var coordinator: (any Coordinating)? = self
         
         while (coordinator != nil && !(coordinator is (any NavigationStackCoordinating))) {

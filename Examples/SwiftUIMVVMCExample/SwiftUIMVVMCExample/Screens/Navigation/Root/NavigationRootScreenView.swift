@@ -16,13 +16,13 @@ struct NavigationRootScreenView<ViewModel: NavigationRootScreenViewModel>: View 
             Spacer().frame(height: 20)
             
             Button("Button GoTo Template") {
-                viewModel.coordinator.addToPath(routeID: ViewModel.Coordinator.RouteID.first)
+                viewModel.coordinator.navigationPathAppend(ViewModel.Coordinator.RouteID.first)
             }
             Button("Button GoTo NavigationChild") {
-                viewModel.coordinator.addToPath(routeID: ViewModel.Coordinator.RouteID.second)
+                viewModel.coordinator.navigationPathAppend(ViewModel.Coordinator.RouteID.second)
             }
             Button("Button GoTo RootRouteIDs") {
-                viewModel.coordinator.addToPath(routeID: ViewModel.Coordinator.RouteID.third)
+                viewModel.coordinator.navigationPathAppend(ViewModel.Coordinator.RouteID.third)
             }
             
             Spacer().frame(height: 20)
