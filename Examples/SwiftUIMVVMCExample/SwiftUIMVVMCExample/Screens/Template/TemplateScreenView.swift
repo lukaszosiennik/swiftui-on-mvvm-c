@@ -9,11 +9,19 @@ struct TemplateScreenView<ViewModel: TemplateScreenViewModel>: View {
     
     @ObservedObject var viewModel: ViewModel
     
+    @Environment(\.dismiss) private var dismiss
+    
     let params: Params
     
     var body: some View {
         VStack {
             Text("\(params.title) Screen")
+            
+            Spacer().frame(height: 20)
+            
+            Button("Dismiss") {
+                dismiss()
+            }
         }
     }
 }
