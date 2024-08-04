@@ -29,7 +29,7 @@ final class TabBarScreenCoordinator: Coordinator, TabBarScreenCoordinating {
                 coordinator: RootRouteIDsScreenCoordinator(parent: self)
             ),
             params: .init(
-                excludedRouteID: .rootRouteIDs
+                excludedRouteID: .home
             )
         )
     }

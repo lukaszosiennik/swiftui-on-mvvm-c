@@ -59,9 +59,9 @@ final class AppCoordinator: TransmittingRootCoordinator<RootRouteIDManager<AppRo
     }
     
     func goToHomeScreen() -> some View {
-        NavigationScreenView(
-            viewModel: NavigationScreenVM(
-                coordinator: NavigationScreenCoordinator(
+        TabBarScreenView(
+            viewModel: TabBarScreenVM(
+                coordinator: TabBarScreenCoordinator(
                     parent: self
                 )
             )
