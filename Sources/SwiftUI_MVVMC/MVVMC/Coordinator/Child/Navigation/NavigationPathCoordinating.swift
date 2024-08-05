@@ -53,7 +53,7 @@ extension NavigationPathCoordinating {
     func navigationPathBinding() -> Binding<NavigationPath>? {
         var coordinator: (any Coordinating)? = self
         
-        while (coordinator != nil && !(coordinator is (any NavigationStackCoordinating))) {
+        while (coordinator != nil && coordinator?.type != .navigationStack) {
             coordinator = coordinator?.parent
         }
         
