@@ -13,11 +13,11 @@ public protocol Coordinating: AnyObject, ObservableObject {
 
 extension Coordinating {
     
-    var levelType: CoordinatorLevelType {
+    public var levelType: CoordinatorLevelType {
         return parent == nil ? .root : .subtree
     }
     
-    var type: CoordinatorType {
+    public var type: CoordinatorType {
         switch self {
         case is any RootCoordinating:
             return .root

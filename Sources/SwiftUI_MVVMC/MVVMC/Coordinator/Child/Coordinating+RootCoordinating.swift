@@ -1,8 +1,8 @@
 //
-//  Created by Łukasz Osiennik on 28/07/2024.
+//  Created by Łukasz Osiennik on 05/08/2024.
 //
 
-extension Coordinator {
+extension Coordinating {
     
     @discardableResult
     public func goToRoot<RouteID: RootRouteID>(
@@ -17,13 +17,16 @@ extension Coordinator {
         return true
     }
     
-    func provideRootRouteIDManager<RouteID: RootRouteID>() -> RootRouteIDManager<RouteID>? {
-        var coordinator: Coordinator? = self
+    func provideRootRouteIDManager<
+        RouteIDManager: RootRouteIDManageable,
+        RouteID: RootRouteID
+    >() -> RouteIDManager? where RouteIDManager.RouteID == RouteID {
+        var coordinator: (any Coordinating)? = self
         
         while (coordinator?.parent != nil) {
             coordinator = coordinator?.parent
         }
         
-        return (coordinator as? TransmittingRootCoordinator)?.routeIDManager
+        return (coordinator as? (any RootCoordinating))?.routeIDManager as? RouteIDManager
     }
 }
