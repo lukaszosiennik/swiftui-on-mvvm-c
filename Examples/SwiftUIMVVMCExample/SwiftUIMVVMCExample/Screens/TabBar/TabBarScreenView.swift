@@ -26,6 +26,13 @@ struct TabBarScreenView<ViewModel: TabBarScreenViewModel>: View {
     }
 
     var body: some View {
+        HStack {
+            Spacer()
+            Button("GoTo RootRouteIDs Screen") {
+                viewModel.coordinator.goToRootRouteIDsScreen()
+            }
+            Spacer().frame(width: 20)
+        }
         TabView {
             ForEach(tabViewParams) { viewParams in
                 viewModel.coordinator.goTo(routeID: viewParams.routeID)

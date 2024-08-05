@@ -6,7 +6,11 @@ import SwiftUI
 import SwiftUI_MVVMC
 
 protocol TabBarScreenCoordinating: TabBarCoordinating
-where RouteID == TabBar.RouteID {}
+where RouteID == TabBar.RouteID {
+    
+    @discardableResult
+    func goToRootRouteIDsScreen() -> Bool
+}
 
 final class TabBarScreenCoordinator: Coordinator, TabBarScreenCoordinating {
     
@@ -17,5 +21,9 @@ final class TabBarScreenCoordinator: Coordinator, TabBarScreenCoordinating {
             ),
             params: .init(forTabBar: routeID)
         )
+    }
+    
+    func goToRootRouteIDsScreen() -> Bool {
+        goToRoot(routeID: AppRootRouteID.rootRouteIDs)
     }
 }
