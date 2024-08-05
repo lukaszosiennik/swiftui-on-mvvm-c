@@ -11,42 +11,11 @@ where RouteID == TabBar.RouteID {}
 final class TabBarScreenCoordinator: Coordinator, TabBarScreenCoordinating {
     
     func goTo(routeID: TabBar.RouteID) -> some View {
-        Group {
-            switch routeID {
-            case .first:
-                goToFirstScreen()
-            case .second:
-                goToSecondScreen()
-            case .third:
-                goToThirdScreen()
-            }
-        }
-    }
-    
-    func goToFirstScreen() -> some View {
-        RootRouteIDsScreenView(
-            viewModel: RootRouteIDsScreenVM(
-                coordinator: RootRouteIDsScreenCoordinator(parent: self)
+        TemplateScreenView(
+            viewModel: TemplateScreenVM(
+                coordinator: TemplateScreenCoordinator(parent: self)
             ),
-            params: .init(
-                excludedRouteID: .home
-            )
-        )
-    }
-    
-    func goToSecondScreen() -> some View {
-        NavigationScreenView(
-            viewModel: NavigationScreenVM(
-                coordinator: NavigationScreenCoordinator(parent: self)
-            )
-        )
-    }
-    
-    func goToThirdScreen() -> some View {
-        ModalsScreenView(
-            viewModel: ModalsScreenVM(
-                coordinator: ModalsScreenCoordinator(parent: self)
-            )
+            params: .init(forTabBar: routeID)
         )
     }
 }

@@ -14,9 +14,12 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinati
     var pathRaw: NavigationPath = .init()
     
     func goToRoot() -> some View {
-        NavigationRootScreenView(
-            viewModel: NavigationRootScreenVM(
-                coordinator: NavigationRootScreenCoordinator(parent: self)
+        NavigationChildScreenView(
+            viewModel: NavigationChildScreenVM(
+                coordinator: NavigationChildScreenCoordinator(parent: self)
+            ),
+            params: .init(
+                number: 0
             )
         )
     }
@@ -24,25 +27,12 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinati
     func goTo(routeID: NavigationScreenNavigationRouteID) -> some View {
         Group {
             switch routeID {
-            case .first:
-                goToTemplateScreen(with: routeID)
-            case .second:
+            case .path:
                 goToNavigationChildScreen()
-            case .third:
-                goToRootRouteIDsScreen()
-            case .fourth:
-                goToModalsScreen()
+            case .link:
+                goToTemplateScreen(with: routeID)
             }
         }
-    }
-    
-    func goToTemplateScreen(with routeID: RouteID) -> some View {
-        TemplateScreenView(
-            viewModel: TemplateScreenVM(
-                coordinator: TemplateScreenCoordinator(parent: self)
-            ),
-            params: .init(forNavigation: routeID)
-        )
     }
     
     func goToNavigationChildScreen() -> some View {
@@ -56,24 +46,12 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinati
         )
     }
     
-    func goToRootRouteIDsScreen() -> some View {
-        RootRouteIDsScreenView(
-            viewModel: RootRouteIDsScreenVM(
-                coordinator: RootRouteIDsScreenCoordinator(
-                    parent: self
-                )
+    func goToTemplateScreen(with routeID: RouteID) -> some View {
+        TemplateScreenView(
+            viewModel: TemplateScreenVM(
+                coordinator: TemplateScreenCoordinator(parent: self)
             ),
-            params: .init(
-                excludedRouteID: .home
-            )
-        )
-    }
-    
-    func goToModalsScreen() -> some View {
-        ModalsScreenView(
-            viewModel: ModalsScreenVM(
-                coordinator: ModalsScreenCoordinator(parent: self)
-            )
+            params: .init(forNavigation: routeID)
         )
     }
 }

@@ -6,7 +6,11 @@ import SwiftUI
 import SwiftUI_MVVMC
 
 protocol ModalsScreenCoordinating: ModalCoordinating 
-where RouteID == ModalsScreenModalRouteID {}
+where RouteID == ModalsScreenModalRouteID {
+    
+    @discardableResult
+    func goToRootRouteIDsScreen() -> Bool
+}
 
 final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
     
@@ -79,5 +83,9 @@ final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
                 coordinator: ConfirmationDialogActionsScreenCoordinator(parent: self)
             )
         )
+    }
+    
+    func goToRootRouteIDsScreen() -> Bool {
+        goToRoot(routeID: AppRootRouteID.rootRouteIDs)
     }
 }

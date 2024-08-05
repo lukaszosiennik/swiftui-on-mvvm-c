@@ -29,8 +29,12 @@ final class AppCoordinator: TransmittingRootCoordinator<RootRouteIDManager<AppRo
                 goToLaunchScreen()
             case .rootRouteIDs:
                 goToRootRouteIDsScreen()
-            case .home:
-                goToHomeScreen()
+            case .tabBar:
+                goToTabBarScreen()
+            case .navigationStack:
+                goToNavigationScreen()
+            case .modals:
+                goToModalsScreen()
             }
         }
     }
@@ -58,12 +62,28 @@ final class AppCoordinator: TransmittingRootCoordinator<RootRouteIDManager<AppRo
         )
     }
     
-    func goToHomeScreen() -> some View {
+    func goToTabBarScreen() -> some View {
         TabBarScreenView(
             viewModel: TabBarScreenVM(
                 coordinator: TabBarScreenCoordinator(
                     parent: self
                 )
+            )
+        )
+    }
+    
+    func goToNavigationScreen() -> some View {
+        NavigationScreenView(
+            viewModel: NavigationScreenVM(
+                coordinator: NavigationScreenCoordinator(parent: self)
+            )
+        )
+    }
+    
+    func goToModalsScreen() -> some View {
+        ModalsScreenView(
+            viewModel: ModalsScreenVM(
+                coordinator: ModalsScreenCoordinator(parent: self)
             )
         )
     }

@@ -18,13 +18,25 @@ struct NavigationChildScreenView<ViewModel: NavigationChildScreenViewModel>: Vie
             Spacer().frame(height: 20)
             
             Button("Button GoTo forward") {
-                viewModel.coordinator.navigationPathAppend(ViewModel.Coordinator.RouteID.second)
+                viewModel.coordinator.navigationPathAppend(ViewModel.Coordinator.RouteID.path)
             }
             Button("Button GoTo backward") {
                 viewModel.coordinator.navigationPathRemoveLast(1)
             }
             Button("Button clear path") {
                 viewModel.coordinator.navigationPathClear()
+            }
+            
+            Spacer().frame(height: 20)
+            
+            NavigationLink(value: ViewModel.Coordinator.RouteID.link) {
+                Text("Link GoTo forward")
+            }
+            
+            Spacer().frame(height: 20)
+            
+            Button("GoTo RootRouteIDs Screen") {
+                viewModel.coordinator.goToRootRouteIDsScreen()
             }
         }
     }

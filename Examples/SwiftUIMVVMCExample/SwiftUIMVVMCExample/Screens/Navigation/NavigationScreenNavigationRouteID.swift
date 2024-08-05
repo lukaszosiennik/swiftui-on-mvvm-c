@@ -6,10 +6,8 @@ import SwiftUI_MVVMC
 
 enum NavigationScreenNavigationRouteID: CaseIterable, NavigationRouteID {
          
-    case first
-    case second
-    case third
-    case fourth
+    case path
+    case link
 }
 
 struct NavigationScreenAllowedNavigationRouteIDs {

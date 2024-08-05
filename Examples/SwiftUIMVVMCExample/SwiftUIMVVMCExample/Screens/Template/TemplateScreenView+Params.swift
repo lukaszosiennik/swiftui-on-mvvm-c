@@ -12,17 +12,29 @@ extension TemplateScreenView {
 
 extension TemplateScreenView.Params {
     
-    init(forNavigation routeID: NavigationScreenNavigationRouteID) {
+    init(forTabBar routeID: TabBar.RouteID) {
         self = {
             switch routeID {
             case .first:
-                .init(title: "NavigationStack First")
+                .init(title: "TabView First")
             case .second:
-                .init(title: "NavigationStack Second")
+                .init(title: "TabView Second")
             case .third:
-                .init(title: "NavigationStack Third")
-            case .fourth:
-                .init(title: "NavigationStack Fourth")
+                .init(title: "TabView Third")
+            }
+        }()
+    }
+}
+
+extension TemplateScreenView.Params {
+    
+    init(forNavigation routeID: NavigationScreenNavigationRouteID) {
+        self = {
+            switch routeID {
+            case .path:
+                .init(title: "NavigationStack Path")
+            case .link:
+                .init(title: "NavigationStack Link")
             }
         }()
     }

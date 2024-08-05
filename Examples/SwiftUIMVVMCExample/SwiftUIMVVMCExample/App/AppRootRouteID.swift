@@ -12,5 +12,7 @@ enum AppRootRouteID: Int, Identifiable, CaseIterable, RootRouteID {
          
     case launch
     case rootRouteIDs
-    case home
+    case tabBar
+    case navigationStack
+    case modals
 }

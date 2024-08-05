@@ -39,9 +39,6 @@
 		B26D090A2C5791E80094CBFB /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D09032C5791E80094CBFB /* LaunchScreenViewModel.swift */; };
 		B275E7C22C5679A1000D3CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B275E7C12C5679A1000D3CB3 /* Assets.xcassets */; };
 		B275E7C52C5679A1000D3CB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B275E7C42C5679A1000D3CB3 /* Preview Assets.xcassets */; };
-		B277746E2C5A7E8F003BC0BD /* NavigationRootScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277746D2C5A7E8F003BC0BD /* NavigationRootScreenView.swift */; };
-		B27774702C5A7EA5003BC0BD /* NavigationRootScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277746F2C5A7EA5003BC0BD /* NavigationRootScreenViewModel.swift */; };
-		B27774722C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27774712C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift */; };
 		B27774762C5A7FE3003BC0BD /* TemplateScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27774752C5A7FE3003BC0BD /* TemplateScreenView.swift */; };
 		B27774782C5A7FF0003BC0BD /* TemplateScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27774772C5A7FF0003BC0BD /* TemplateScreenViewModel.swift */; };
 		B277747A2C5A7FFE003BC0BD /* TemplateScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27774792C5A7FFE003BC0BD /* TemplateScreenCoordinator.swift */; };
@@ -90,9 +87,6 @@
 		B275E7BA2C56799F000D3CB3 /* SwiftUIMVVMCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMVVMCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B275E7C12C5679A1000D3CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B275E7C42C5679A1000D3CB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B277746D2C5A7E8F003BC0BD /* NavigationRootScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootScreenView.swift; sourceTree = "<group>"; };
-		B277746F2C5A7EA5003BC0BD /* NavigationRootScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootScreenViewModel.swift; sourceTree = "<group>"; };
-		B27774712C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootScreenCoordinator.swift; sourceTree = "<group>"; };
 		B27774752C5A7FE3003BC0BD /* TemplateScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScreenView.swift; sourceTree = "<group>"; };
 		B27774772C5A7FF0003BC0BD /* TemplateScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScreenViewModel.swift; sourceTree = "<group>"; };
 		B27774792C5A7FFE003BC0BD /* TemplateScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScreenCoordinator.swift; sourceTree = "<group>"; };
@@ -261,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				B277746C2C5A7E62003BC0BD /* Root */,
-				B2ECAC192C5BC27800E8F57F /* Child */,
 				B277747F2C5A85F3003BC0BD /* NavigationScreenView.swift */,
 				B27774812C5A85FA003BC0BD /* NavigationScreenViewModel.swift */,
 				B27774832C5A8605003BC0BD /* NavigationScreenCoordinator.swift */,
@@ -273,9 +266,10 @@
 		B277746C2C5A7E62003BC0BD /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				B277746D2C5A7E8F003BC0BD /* NavigationRootScreenView.swift */,
-				B277746F2C5A7EA5003BC0BD /* NavigationRootScreenViewModel.swift */,
-				B27774712C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift */,
+				B2ECAC1A2C5BC2B900E8F57F /* NavigationChildScreenView.swift */,
+				B2ECAC1B2C5BC2B900E8F57F /* NavigationChildScreenViewModel.swift */,
+				B2ECAC1C2C5BC2B900E8F57F /* NavigationChildScreenCoordinator.swift */,
+				B23CB5C02C5D838D001B498F /* NavigationChildScreenView+Params.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -296,17 +290,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B2ECAC192C5BC27800E8F57F /* Child */ = {
-			isa = PBXGroup;
-			children = (
-				B2ECAC1A2C5BC2B900E8F57F /* NavigationChildScreenView.swift */,
-				B2ECAC1B2C5BC2B900E8F57F /* NavigationChildScreenViewModel.swift */,
-				B2ECAC1C2C5BC2B900E8F57F /* NavigationChildScreenCoordinator.swift */,
-				B23CB5C02C5D838D001B498F /* NavigationChildScreenView+Params.swift */,
-			);
-			path = Child;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,14 +369,12 @@
 			files = (
 				B277747E2C5A842E003BC0BD /* NavigationScreenNavigationRouteID.swift in Sources */,
 				B21E041F2C5D0C04008E2556 /* AlertActionsScreenCoordinator.swift in Sources */,
-				B277746E2C5A7E8F003BC0BD /* NavigationRootScreenView.swift in Sources */,
 				B26D08FA2C5791DE0094CBFB /* AppRootRouteID.swift in Sources */,
 				B27774762C5A7FE3003BC0BD /* TemplateScreenView.swift in Sources */,
 				B23BE04E2C5AAA2F009858AB /* RootRouteIDsScreenViewModel.swift in Sources */,
 				B23BE04D2C5AAA2F009858AB /* RootRouteIDsScreenView+Params.swift in Sources */,
 				B23CB5BF2C5D72A7001B498F /* TabBarScreenViewModel.swift in Sources */,
 				B21E04202C5D0C04008E2556 /* AlertActionsScreenView.swift in Sources */,
-				B27774702C5A7EA5003BC0BD /* NavigationRootScreenViewModel.swift in Sources */,
 				B26D09072C5791E80094CBFB /* EmptyScreenViewModel.swift in Sources */,
 				B23CB5BC2C5D72A7001B498F /* TabBar+Tab+ViewParams.swift in Sources */,
 				B27774822C5A85FA003BC0BD /* NavigationScreenViewModel.swift in Sources */,
@@ -419,7 +400,6 @@
 				B23CB5BE2C5D72A7001B498F /* TabBarScreenView.swift in Sources */,
 				B23CB5BD2C5D72A7001B498F /* TabBarScreenCoordinator.swift in Sources */,
 				B21E04262C5D0C04008E2556 /* ModalsScreenModalRouteID.swift in Sources */,
-				B27774722C5A7EAF003BC0BD /* NavigationRootScreenCoordinator.swift in Sources */,
 				B21E04222C5D0C04008E2556 /* ConfirmationDialogActionsScreenCoordinator.swift in Sources */,
 				B26D09062C5791E80094CBFB /* EmptyScreenView.swift in Sources */,
 				B26D08F92C5791DD0094CBFB /* AppCoordinator.swift in Sources */,

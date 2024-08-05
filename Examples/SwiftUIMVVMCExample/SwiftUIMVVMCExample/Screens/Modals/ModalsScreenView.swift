@@ -43,6 +43,12 @@ struct ModalsScreenView<ViewModel: ModalsScreenViewModel>: View {
             } message: {
                 Text("ConfirmationDialog Message")
             }
+            
+            Spacer().frame(height: 20)
+            
+            Button("GoTo RootRouteIDs Screen") {
+                viewModel.coordinator.goToRootRouteIDsScreen()
+            }
         }
     }
 }

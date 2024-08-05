@@ -32,8 +32,12 @@ struct RootRouteIDsScreenView<ViewModel: RootRouteIDsScreenViewModel>: View {
             "Launch"
         case .rootRouteIDs:
             "RootRouteIDs"
-        case .home:
-            "Home"
+        case .tabBar:
+            "TabBar"
+        case .navigationStack:
+            "NavigationStack"
+        case .modals:
+            "Modals"
         }
     }
 }
@@ -44,7 +48,7 @@ struct RootRouteIDsScreenView<ViewModel: RootRouteIDsScreenViewModel>: View {
             coordinator: RootRouteIDsScreenCoordinator(parent: nil)
         ),
         params: .init(
-            excludedRouteID: .launch
+            excludedRouteID: .rootRouteIDs
         )
     )
 }
