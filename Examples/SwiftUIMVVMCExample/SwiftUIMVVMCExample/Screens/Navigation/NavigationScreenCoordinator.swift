@@ -41,7 +41,7 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinati
                 coordinator: NavigationChildScreenCoordinator(parent: self)
             ),
             params: .init(
-                number: 0
+                number: pathRaw.count
             )
         )
     }

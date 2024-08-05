@@ -13,7 +13,7 @@ struct NavigationChildScreenView<ViewModel: NavigationChildScreenViewModel>: Vie
     
     var body: some View {
         VStack {
-            Text("NavigationChild Screen")
+            Text("NavigationChild Screen \(params.number)")
             
             Spacer().frame(height: 20)
             

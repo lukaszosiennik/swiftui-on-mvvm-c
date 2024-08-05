@@ -7,6 +7,13 @@ extension TemplateScreenView {
     struct Params {
         
         let title: String
+        
+        let isDismissible: Bool
+        
+        init(title: String, isDismissible: Bool = true) {
+            self.title = title
+            self.isDismissible = isDismissible
+        }
     }
 }
 
@@ -16,11 +23,20 @@ extension TemplateScreenView.Params {
         self = {
             switch routeID {
             case .first:
-                .init(title: "TabView First")
+                .init(
+                    title: "TabView First",
+                    isDismissible: false
+                )
             case .second:
-                .init(title: "TabView Second")
+                .init(
+                    title: "TabView Second",
+                    isDismissible: false
+                )
             case .third:
-                .init(title: "TabView Third")
+                .init(
+                    title: "TabView Third",
+                    isDismissible: false
+                )
             }
         }()
     }

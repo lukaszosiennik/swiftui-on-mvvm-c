@@ -17,10 +17,12 @@ struct TemplateScreenView<ViewModel: TemplateScreenViewModel>: View {
         VStack {
             Text("\(params.title) Screen")
             
-            Spacer().frame(height: 20)
-            
-            Button("Dismiss") {
-                dismiss()
+            if params.isDismissible {
+                Spacer().frame(height: 20)
+                
+                Button("Dismiss") {
+                    dismiss()
+                }
             }
         }
     }
