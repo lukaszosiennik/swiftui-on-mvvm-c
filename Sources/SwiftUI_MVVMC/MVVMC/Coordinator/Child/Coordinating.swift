@@ -16,4 +16,21 @@ extension Coordinating {
     var levelType: CoordinatorLevelType {
         return parent == nil ? .root : .subtree
     }
+    
+    var type: CoordinatorType {
+        switch self {
+        case is any RootCoordinating:
+            return .root
+        case is any TabBarRouteID:
+            return .tabBar
+        case is any NavigationStackCoordinating:
+            return .navigationStack
+        case is any NavigationPathCoordinating:
+            return .navigationPath
+        case is any ModalCoordinating:
+            return .modal
+        default:
+            return .raw
+        }
+    }
 }
