@@ -35,7 +35,7 @@ struct TabBarScreenView<ViewModel: TabBarScreenViewModel>: View {
         }
         TabView {
             ForEach(tabViewParams) { viewParams in
-                viewModel.coordinator.goTo(routeID: viewParams.routeID)
+                viewModel.coordinator.goToTabBar(routeID: viewParams.routeID)
                 .tabItem {
                     Label(
                         viewParams.title,

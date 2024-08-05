@@ -36,7 +36,7 @@ final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
         }
     }
         
-    func goTo(routeID: ModalsScreenModalRouteID) -> some View {
+    func goToModal(routeID: ModalsScreenModalRouteID) -> some View {
         Group {
             switch routeID {
             case .sheet:

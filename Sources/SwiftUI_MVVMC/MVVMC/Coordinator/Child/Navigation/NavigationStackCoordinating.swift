@@ -14,8 +14,8 @@ public protocol NavigationStackCoordinating: Coordinating {
     var pathRaw: NavigationPath { get set }
     var pathBinding: Binding<NavigationPath> { get }
     
-    func goToRoot() -> RootView
-    func goTo(routeID: RouteID) -> DestinationView
+    func goToNavigationRoot() -> RootView
+    func goToNavigation(routeID: RouteID) -> DestinationView
 }
 
 extension NavigationStackCoordinating {

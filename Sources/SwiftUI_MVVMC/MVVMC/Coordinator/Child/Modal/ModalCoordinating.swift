@@ -12,7 +12,7 @@ public protocol ModalCoordinating: Coordinating {
     
     func isPresented(routeID: RouteID) -> Binding<Bool>
     
-    func goTo(routeID: RouteID) -> View
+    func goToModal(routeID: RouteID) -> View
 }
 
 extension ModalCoordinating {

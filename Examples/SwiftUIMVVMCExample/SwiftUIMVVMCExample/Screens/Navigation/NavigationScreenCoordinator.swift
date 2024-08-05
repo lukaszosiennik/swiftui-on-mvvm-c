@@ -13,7 +13,7 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinati
     @Published
     var pathRaw: NavigationPath = .init()
     
-    func goToRoot() -> some View {
+    func goToNavigationRoot() -> some View {
         NavigationChildScreenView(
             viewModel: NavigationChildScreenVM(
                 coordinator: NavigationChildScreenCoordinator(parent: self)
@@ -24,7 +24,7 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinati
         )
     }
     
-    func goTo(routeID: NavigationScreenNavigationRouteID) -> some View {
+    func goToNavigation(routeID: NavigationScreenNavigationRouteID) -> some View {
         Group {
             switch routeID {
             case .path:

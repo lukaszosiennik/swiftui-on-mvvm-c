@@ -18,28 +18,28 @@ struct ModalsScreenView<ViewModel: ModalsScreenViewModel>: View {
                 viewModel.coordinator.isPresented(routeID: .sheet).wrappedValue.toggle()
             }
             .sheet(isPresented: viewModel.coordinator.isPresented(routeID: .sheet)) {
-                viewModel.coordinator.goTo(routeID: .sheet)
+                viewModel.coordinator.goToModal(routeID: .sheet)
             }
             
             Button("GoTo Modal FullScreenCover") {
                 viewModel.coordinator.isPresented(routeID: .fullScreenCover).wrappedValue.toggle()
             }
             .fullScreenCover(isPresented: viewModel.coordinator.isPresented(routeID: .fullScreenCover)) {
-                viewModel.coordinator.goTo(routeID: .fullScreenCover)
+                viewModel.coordinator.goToModal(routeID: .fullScreenCover)
             }
             
             Button("GoTo Modal Alert") {
                 viewModel.coordinator.isPresented(routeID: .alert).wrappedValue.toggle()
             }
             .alert("Alert Screen", isPresented: viewModel.coordinator.isPresented(routeID: .alert)) {
-                viewModel.coordinator.goTo(routeID: .alert)
+                viewModel.coordinator.goToModal(routeID: .alert)
             }
             
             Button("GoTo Modal ConfirmationDialog") {
                 viewModel.coordinator.isPresented(routeID: .confirmationDialog).wrappedValue.toggle()
             }
             .confirmationDialog("ConfirmationDialog Screen", isPresented: viewModel.coordinator.isPresented(routeID: .confirmationDialog)) {
-                viewModel.coordinator.goTo(routeID: .confirmationDialog)
+                viewModel.coordinator.goToModal(routeID: .confirmationDialog)
             } message: {
                 Text("ConfirmationDialog Message")
             }

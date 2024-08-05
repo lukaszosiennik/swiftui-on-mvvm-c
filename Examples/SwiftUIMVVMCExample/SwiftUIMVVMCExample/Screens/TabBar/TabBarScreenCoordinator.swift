@@ -14,7 +14,7 @@ where RouteID == TabBar.RouteID {
 
 final class TabBarScreenCoordinator: Coordinator, TabBarScreenCoordinating {
     
-    func goTo(routeID: TabBar.RouteID) -> some View {
+    func goToTabBar(routeID: TabBar.RouteID) -> some View {
         TemplateScreenView(
             viewModel: TemplateScreenVM(
                 coordinator: TemplateScreenCoordinator(parent: self)

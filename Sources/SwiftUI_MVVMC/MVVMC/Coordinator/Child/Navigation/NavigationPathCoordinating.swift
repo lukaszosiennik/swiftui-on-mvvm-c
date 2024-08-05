@@ -31,7 +31,7 @@ extension NavigationPathCoordinating {
     }
     
     public func navigationPathRemoveLast(_ segmentCount: Int) -> Bool {
-        guard let pathBinding = navigationPathBinding() else {
+        guard let pathBinding = navigationPathBinding(), !pathBinding.wrappedValue.isEmpty else {
             return false
         }
         

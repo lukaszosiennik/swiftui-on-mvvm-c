@@ -10,5 +10,5 @@ public protocol TabBarCoordinating: Coordinating {
     
     associatedtype RouteID: TabBarRouteID
     
-    func goTo(routeID: RouteID) -> View
+    func goToTabBar(routeID: RouteID) -> View
 }

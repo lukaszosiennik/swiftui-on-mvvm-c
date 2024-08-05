@@ -11,9 +11,9 @@ struct NavigationScreenView<ViewModel: NavigationScreenViewModel>: View {
 
     var body: some View {
         NavigationStack(path: $viewModel.coordinator.pathRaw) {
-            viewModel.coordinator.goToRoot()
+            viewModel.coordinator.goToNavigationRoot()
             .navigationDestination(for: ViewModel.Coordinator.RouteID.self) { routeID in
-                viewModel.coordinator.goTo(routeID: routeID)
+                viewModel.coordinator.goToNavigation(routeID: routeID)
             }
         }
     }
