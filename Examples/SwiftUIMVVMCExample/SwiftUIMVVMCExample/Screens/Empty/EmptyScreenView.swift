@@ -10,7 +10,7 @@ struct EmptyScreenView<ViewModel: EmptyScreenViewModel>: View {
     var viewModel: ViewModel
     
     var body: some View {
-        Text("Home Screen")
+        Text("Empty Screen")
     }
 }
 
