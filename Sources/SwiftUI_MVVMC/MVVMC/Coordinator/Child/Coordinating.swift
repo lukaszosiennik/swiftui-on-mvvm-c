@@ -10,3 +10,10 @@ public protocol Coordinating: AnyObject, ObservableObject {
     
     var parent: Coordinator? { get }
 }
+
+extension Coordinating {
+    
+    var levelType: CoordinatorLevelType {
+        return parent == nil ? .root : .subtree
+    }
+}
