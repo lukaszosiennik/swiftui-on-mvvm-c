@@ -5,7 +5,7 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-protocol AppCoordinating: Coordinating {
+protocol AppCoordinating: RootCoordinating {
     
     associatedtype View: SwiftUI.View
     
