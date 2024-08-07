@@ -11,16 +11,16 @@ open class TransmittingRootCoordinator<
 
     @ObservedObject
     public private(set) var routeIDManager: RootRouteIDManager
-    
+
     var transmissionSubscription: AnyCancellable?
-    
+
     public init(
         parent: Coordinator?,
         routeIDManager: RootRouteIDManager
     ) {
         self.routeIDManager = routeIDManager
         super.init(parent: parent)
-        
+
         initiateTransmission(for: routeIDManager)
     }
 }

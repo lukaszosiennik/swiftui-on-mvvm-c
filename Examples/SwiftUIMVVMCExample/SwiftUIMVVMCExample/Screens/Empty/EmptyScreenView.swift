@@ -5,10 +5,10 @@
 import SwiftUI
 
 struct EmptyScreenView<ViewModel: EmptyScreenViewModel>: View {
-    
+
     @ObservedObject
     var viewModel: ViewModel
-    
+
     var body: some View {
         Text("Empty Screen")
     }

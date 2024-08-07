@@ -8,9 +8,9 @@ public final class RootRouteIDManager<
     RouteID: RootRouteID
 >: RootRouteIDManageable {
 
-    @Published 
+    @Published
     public var currentRouteID: RouteID
-    
+
     public init(currentRouteID: RouteID) {
         self.currentRouteID = currentRouteID
     }

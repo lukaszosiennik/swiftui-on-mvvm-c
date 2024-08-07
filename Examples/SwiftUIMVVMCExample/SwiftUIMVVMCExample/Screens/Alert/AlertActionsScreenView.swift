@@ -5,9 +5,9 @@
 import SwiftUI
 
 struct AlertActionsScreenView<ViewModel: AlertActionsScreenViewModel>: View {
-    
+
     @ObservedObject var viewModel: ViewModel
-    
+
     var body: some View {
         Button("OK", role: .cancel) {}
     }

@@ -5,17 +5,17 @@
 import SwiftUI
 
 struct RootRouteIDsScreenView<ViewModel: RootRouteIDsScreenViewModel>: View {
-    
+
     @ObservedObject var viewModel: ViewModel
-    
+
     let params: Params
-    
+
     var body: some View {
         VStack {
             Text("RootRouteIDs Screen")
-            
+
             Spacer().frame(height: 20)
-            
+
             ForEach(AppRootRouteID.allCases) { routeID in
                 if routeID != params.excludedRouteID {
                     Button("GoTo \(screenName(for: routeID)) RootScreen") {
@@ -25,7 +25,7 @@ struct RootRouteIDsScreenView<ViewModel: RootRouteIDsScreenViewModel>: View {
             }
         }
     }
-    
+
     private func screenName(for routeID: AppRootRouteID) -> String {
         switch routeID {
         case .launch:

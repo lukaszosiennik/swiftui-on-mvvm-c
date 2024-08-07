@@ -5,18 +5,18 @@
 import Foundation
 
 public protocol Coordinating: AnyObject, ObservableObject {
-    
+
     associatedtype Coordinator: Coordinating
-    
+
     var parent: Coordinator? { get }
 }
 
 extension Coordinating {
-    
+
     public var levelType: CoordinatorLevelType {
         return parent == nil ? .root : .subtree
     }
-    
+
     public var type: CoordinatorType {
         switch self {
         case is any RootCoordinating:

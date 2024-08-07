@@ -5,10 +5,10 @@
 import SwiftUI
 
 public protocol TabBarCoordinating: Coordinating {
-    
+
     associatedtype View: SwiftUI.View
-    
+
     associatedtype RouteID: TabBarRouteID
-    
+
     func goToTabBar(routeID: RouteID) -> View
 }

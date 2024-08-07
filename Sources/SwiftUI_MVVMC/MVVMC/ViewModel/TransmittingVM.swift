@@ -9,15 +9,14 @@ open class TransmittingVM<
     Coordinator: Coordinating
 >: ViewModel, ObservedObjectChangeTransmitter {
 
-    @ObservedObject 
+    @ObservedObject
     public var coordinator: Coordinator
-    
+
     var transmissionSubscription: AnyCancellable?
 
     public init(coordinator: Coordinator) {
         self.coordinator = coordinator
-        
+
         initiateTransmission(for: coordinator)
     }
 }
-

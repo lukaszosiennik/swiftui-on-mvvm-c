@@ -5,24 +5,24 @@
 import SwiftUI
 import SwiftUI_MVVMC
 
-protocol ModalsScreenCoordinating: ModalCoordinating 
+protocol ModalsScreenCoordinating: ModalCoordinating
 where RouteID == ModalsScreenModalRouteID {
-    
+
     @discardableResult
     func goToRootRouteIDsScreen() -> Bool
 }
 
 final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
-    
-    @Published 
+
+    @Published
     var isSheetPresented: Bool = false
-    @Published 
+    @Published
     var isFullScreenCoverPresented: Bool = false
-    @Published 
+    @Published
     var isAlertPresented: Bool = false
-    @Published 
+    @Published
     var isConfirmationDialogPresented: Bool = false
-    
+
     func isPresented(routeID: ModalsScreenModalRouteID) -> Binding<Bool> {
         switch routeID {
         case .sheet:
@@ -35,7 +35,7 @@ final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
             isPresented(keyPath: \Self.isConfirmationDialogPresented)
         }
     }
-        
+
     func goToModal(routeID: ModalsScreenModalRouteID) -> some View {
         Group {
             switch routeID {
@@ -50,7 +50,7 @@ final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
             }
         }
     }
-    
+
     func goToSheet() -> some View {
         TemplateScreenView(
             viewModel: TemplateScreenVM(
@@ -59,7 +59,7 @@ final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
             params: .init(forModal: .sheet)
         )
     }
-    
+
     func goToFullScreenCover() -> some View {
         TemplateScreenView(
             viewModel: TemplateScreenVM(
@@ -68,7 +68,7 @@ final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
             params: .init(forModal: .fullScreenCover)
         )
     }
-    
+
     func goToAlert() -> some View {
         AlertActionsScreenView(
             viewModel: AlertActionsScreenVM(
@@ -76,7 +76,7 @@ final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
             )
         )
     }
-    
+
     func goToConfirmationDialog() -> some View {
         ConfirmationDialogActionsScreenView(
             viewModel: ConfirmationDialogActionsScreenVM(
@@ -84,7 +84,7 @@ final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
             )
         )
     }
-    
+
     func goToRootRouteIDsScreen() -> Bool {
         goToRoot(routeID: AppRootRouteID.rootRouteIDs)
     }

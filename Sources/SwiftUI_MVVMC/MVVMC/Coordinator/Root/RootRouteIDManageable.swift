@@ -5,8 +5,8 @@
 import Combine
 
 public protocol RootRouteIDManageable: AnyObject, ObservableObject {
-    
+
     associatedtype RouteID: RootRouteID
-    
+
     var currentRouteID: RouteID { get set }
 }

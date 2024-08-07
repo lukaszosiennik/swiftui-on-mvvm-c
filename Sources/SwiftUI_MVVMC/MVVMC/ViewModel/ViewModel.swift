@@ -5,8 +5,8 @@
 import Foundation
 
 public protocol ViewModel: AnyObject, ObservableObject {
-    
+
     associatedtype Coordinator: Coordinating
-    
+
     var coordinator: Coordinator { get set }
 }

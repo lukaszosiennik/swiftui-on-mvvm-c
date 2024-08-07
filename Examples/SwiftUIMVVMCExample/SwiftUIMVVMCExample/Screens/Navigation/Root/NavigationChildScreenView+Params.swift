@@ -3,9 +3,9 @@
 //
 
 extension NavigationChildScreenView {
- 
+
     struct Params {
-        
+
         let number: Int
     }
 }

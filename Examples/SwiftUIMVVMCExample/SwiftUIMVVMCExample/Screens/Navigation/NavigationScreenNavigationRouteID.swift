@@ -5,12 +5,12 @@
 import SwiftUI_MVVMC
 
 enum NavigationScreenNavigationRouteID: CaseIterable, NavigationRouteID {
-         
+
     case path
     case link
 }
 
 struct NavigationScreenAllowedNavigationRouteIDs {
-    
+
     var values: Set<NavigationScreenNavigationRouteID>
 }

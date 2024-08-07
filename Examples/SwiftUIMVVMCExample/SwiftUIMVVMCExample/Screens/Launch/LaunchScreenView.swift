@@ -6,12 +6,12 @@ import SwiftUI
 
 struct LaunchScreenView<ViewModel: LaunchScreenViewModel>: View {
 
-    @ObservedObject 
+    @ObservedObject
     var viewModel: ViewModel
 
     var body: some View {
         Text("Launch Screen")
-        .onAppear() {
+        .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 viewModel.coordinator.goToRootRouteIDsScreen()
             }

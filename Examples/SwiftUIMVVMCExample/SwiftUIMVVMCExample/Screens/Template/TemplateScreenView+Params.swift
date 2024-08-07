@@ -3,13 +3,13 @@
 //
 
 extension TemplateScreenView {
- 
+
     struct Params {
-        
+
         let title: String
-        
+
         let isDismissible: Bool
-        
+
         init(title: String, isDismissible: Bool = true) {
             self.title = title
             self.isDismissible = isDismissible
@@ -18,7 +18,7 @@ extension TemplateScreenView {
 }
 
 extension TemplateScreenView.Params {
-    
+
     init(forTabBar routeID: TabBar.RouteID) {
         self = {
             switch routeID {
@@ -43,7 +43,7 @@ extension TemplateScreenView.Params {
 }
 
 extension TemplateScreenView.Params {
-    
+
     init(forNavigation routeID: NavigationScreenNavigationRouteID) {
         self = {
             switch routeID {
@@ -57,7 +57,7 @@ extension TemplateScreenView.Params {
 }
 
 extension TemplateScreenView.Params {
-    
+
     init(forModal routeID: ModalsScreenModalRouteID) {
         self = {
             switch routeID {

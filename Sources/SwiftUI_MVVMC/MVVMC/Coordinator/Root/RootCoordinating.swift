@@ -3,8 +3,8 @@
 //
 
 public protocol RootCoordinating: Coordinating {
-    
+
     associatedtype RootRouteIDManager: RootRouteIDManageable
-    
+
     var routeIDManager: RootRouteIDManager { get }
 }

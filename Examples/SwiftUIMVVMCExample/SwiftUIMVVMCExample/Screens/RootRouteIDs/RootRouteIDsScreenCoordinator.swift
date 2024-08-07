@@ -5,7 +5,7 @@
 import SwiftUI_MVVMC
 
 protocol RootRouteIDsScreenCoordinating: Coordinating {
-    
+
     @discardableResult
     func goToRoot(routeID: AppRootRouteID) -> Bool
 }

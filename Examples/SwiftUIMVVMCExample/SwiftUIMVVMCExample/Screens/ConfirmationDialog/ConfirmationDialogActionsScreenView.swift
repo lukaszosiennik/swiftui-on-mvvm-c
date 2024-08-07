@@ -5,9 +5,9 @@
 import SwiftUI
 
 struct ConfirmationDialogActionsScreenView<ViewModel: ConfirmationDialogActionsScreenViewModel>: View {
-    
+
     @ObservedObject var viewModel: ViewModel
-    
+
     var body: some View {
         Button("Option 1") {}
         Button("Option 2") {}

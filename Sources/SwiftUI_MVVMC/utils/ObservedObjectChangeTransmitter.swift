@@ -6,12 +6,12 @@ import Combine
 
 protocol ObservedObjectChangeTransmitter: AnyObject, ObservableObject
 where Self.ObjectWillChangePublisher == ObservableObjectPublisher {
-    
+
     var transmissionSubscription: AnyCancellable? { get set }
 }
 
 extension ObservedObjectChangeTransmitter {
-    
+
     func initiateTransmission<Object: ObservableObject>(for object: Object) {
         transmissionSubscription = object
             .objectWillChange

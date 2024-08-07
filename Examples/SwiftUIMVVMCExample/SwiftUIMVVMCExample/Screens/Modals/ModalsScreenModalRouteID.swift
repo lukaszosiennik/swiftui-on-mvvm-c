@@ -5,7 +5,7 @@
 import SwiftUI_MVVMC
 
 enum ModalsScreenModalRouteID: ModalRouteID {
-         
+
     case sheet
     case fullScreenCover
     case alert

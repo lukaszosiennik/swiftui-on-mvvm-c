@@ -3,41 +3,41 @@
 //
 
 extension TabBar.Tab {
-    
+
     struct ViewParamsIdentified: Identifiable {
-        
+
         var id: TabBar.Tab {
             tab
         }
-        
+
         let tab: TabBar.Tab
         let viewParams: ViewParams
-        
+
         var routeID: TabBar.RouteID {
             tab
         }
     }
-    
+
     struct ViewParams {
-        
+
         let title: String
         let imageName: String
     }
 }
 
 extension TabBar.Tab.ViewParamsIdentified {
-    
+
     var title: String {
         viewParams.title
     }
-    
+
     var imageName: String {
         viewParams.imageName
     }
 }
 
 extension TabBar.Tab.ViewParamsIdentified {
-    
+
     init(for tab: TabBar.Tab) {
         self = {
             switch tab {

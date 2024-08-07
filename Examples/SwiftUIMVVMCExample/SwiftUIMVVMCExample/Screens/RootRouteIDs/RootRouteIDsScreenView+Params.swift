@@ -3,9 +3,9 @@
 //
 
 extension RootRouteIDsScreenView {
- 
+
     struct Params {
-        
+
         let excludedRouteID: AppRootRouteID
     }
 }

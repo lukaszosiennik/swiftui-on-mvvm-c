@@ -5,11 +5,11 @@
 import SwiftUI_MVVMC
 
 enum AppRootRouteID: Int, Identifiable, CaseIterable, RootRouteID {
-    
+
     var id: Int {
         rawValue
     }
-         
+
     case launch
     case rootRouteIDs
     case tabBar

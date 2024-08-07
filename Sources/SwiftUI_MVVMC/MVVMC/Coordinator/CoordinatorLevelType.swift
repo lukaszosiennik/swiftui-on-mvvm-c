@@ -3,7 +3,7 @@
 //
 
 public enum CoordinatorLevelType {
-    
+
     case root
     case subtree
 }
