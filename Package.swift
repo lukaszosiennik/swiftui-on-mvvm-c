@@ -15,14 +15,23 @@ let package = Package(
             ]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.56.0"),
+    ],
     targets: [
         .target(
-            name: "SwiftUI_MVVMC"
+            name: "SwiftUI_MVVMC",
+            plugins: [
+                .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins"),
+            ]
         ),
         .testTarget(
             name: "SwiftUI_MVVMC_Tests",
             dependencies: [
                 "SwiftUI_MVVMC",
+            ],
+            plugins: [
+                .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins"),
             ]
         ),
     ]
