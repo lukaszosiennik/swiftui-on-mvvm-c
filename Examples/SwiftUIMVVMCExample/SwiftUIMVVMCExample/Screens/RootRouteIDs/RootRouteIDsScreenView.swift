@@ -21,6 +21,7 @@ struct RootRouteIDsScreenView<ViewModel: RootRouteIDsScreenViewModel>: View {
                     Button("GoTo \(screenName(for: routeID)) RootScreen") {
                         viewModel.coordinator.goToRoot(routeID: routeID)
                     }
+                    Spacer().frame(height: 4)
                 }
             }
         }

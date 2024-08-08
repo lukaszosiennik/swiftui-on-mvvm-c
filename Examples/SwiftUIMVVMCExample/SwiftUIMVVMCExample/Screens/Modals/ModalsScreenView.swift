@@ -21,6 +21,8 @@ struct ModalsScreenView<ViewModel: ModalsScreenViewModel>: View {
                 viewModel.coordinator.goToModal(routeID: .sheet)
             }
 
+            Spacer().frame(height: 4)
+
             Button("GoTo Modal FullScreenCover") {
                 viewModel.coordinator.isPresented(routeID: .fullScreenCover).wrappedValue.toggle()
             }
@@ -28,12 +30,16 @@ struct ModalsScreenView<ViewModel: ModalsScreenViewModel>: View {
                 viewModel.coordinator.goToModal(routeID: .fullScreenCover)
             }
 
+            Spacer().frame(height: 4)
+
             Button("GoTo Modal Alert") {
                 viewModel.coordinator.isPresented(routeID: .alert).wrappedValue.toggle()
             }
             .alert("Alert Screen", isPresented: viewModel.coordinator.isPresented(routeID: .alert)) {
                 viewModel.coordinator.goToModal(routeID: .alert)
             }
+
+            Spacer().frame(height: 4)
 
             Button("GoTo Modal ConfirmationDialog") {
                 viewModel.coordinator.isPresented(routeID: .confirmationDialog).wrappedValue.toggle()
