@@ -13,11 +13,11 @@
 
 [Description of the architecture and components]: #
 
-### `ViewModel`
+### View Model
 * `ViewModel`
 * `TransmittingVM`
 
-### `Coordinator`
+### Coordinator
 * main
   * `Coordinating`
   * `Coordinator`
