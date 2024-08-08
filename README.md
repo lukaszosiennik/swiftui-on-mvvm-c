@@ -23,4 +23,4 @@
 
 ## Community
 
-If you want to discuss anything related to the library, I invite you [here][gh-discussions].
+If you want to discuss anything related to the library, I invite you [here](https://github.com/lukaszosiennik/swiftui-on-mvvmc/discussions).
