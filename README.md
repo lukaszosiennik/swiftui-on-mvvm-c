@@ -13,6 +13,31 @@
 
 [Description of the architecture and components]: #
 
+### `ViewModel`
+* `ViewModel`
+* `TransmittingVM`
+
+### `Coordinator`
+* main
+  * `Coordinating`
+  * `Coordinator`
+* root
+  * `RootCoordinating`
+  * `TransmittingRootCoordinator`
+  * `RootRouteID`
+* featured
+  * navigation
+    * `NavigationStackCoordinating`
+    * `NavigationPathCoordinating`
+    * `NavigationRouteID`
+  * modal
+    * `ModalCoordinating`
+    * `ModalRouteID`
+  * tab bar
+    * `TabBarCoordinating`
+    * `TabBarRouteID`
+
+
 ## Example app
 
 [Description of the SwiftUIMVVMCExample app]: #
