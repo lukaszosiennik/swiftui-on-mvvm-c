@@ -14,6 +14,12 @@ protocol AppCoordinating: RootCoordinating {
 
 final class AppCoordinator: TransmittingRootCoordinator<RootRouteIDManager<AppRootRouteID>>, AppCoordinating {
 
+    private weak var launchScreenVM: LaunchScreenVM<LaunchScreenCoordinator>?
+    private weak var rootRouteIDsScreenVM: RootRouteIDsScreenVM<RootRouteIDsScreenCoordinator>?
+    private weak var tabBarScreenVM: TabBarScreenVM<TabBarScreenCoordinator>?
+    private weak var navigationScreenVM: NavigationScreenVM<NavigationScreenCoordinator>?
+    private weak var modalsScreenVM: ModalsScreenVM<ModalsScreenCoordinator>?
+
     init(rootRouteIDManager: RootRouteIDManager = .init(currentRouteID: .launch)) {
         super.init(parent: nil, routeIDManager: rootRouteIDManager)
     }
@@ -41,21 +47,17 @@ final class AppCoordinator: TransmittingRootCoordinator<RootRouteIDManager<AppRo
 
     func goToLaunchScreen() -> some View {
         LaunchScreenView(
-            viewModel: LaunchScreenVM(
-                coordinator: LaunchScreenCoordinator(
-                    parent: self
-                )
-            )
+            viewModel: viewModelProvider.perform(&launchScreenVM) {
+                .init(coordinator: .init(parent: self))
+            }
         )
     }
 
     func goToRootRouteIDsScreen() -> some View {
         RootRouteIDsScreenView(
-            viewModel: RootRouteIDsScreenVM(
-                coordinator: RootRouteIDsScreenCoordinator(
-                    parent: self
-                )
-            ),
+            viewModel: viewModelProvider.perform(&rootRouteIDsScreenVM) {
+                .init(coordinator: .init(parent: self))
+            },
             params: .init(
                 excludedRouteID: .rootRouteIDs
             )
@@ -64,27 +66,25 @@ final class AppCoordinator: TransmittingRootCoordinator<RootRouteIDManager<AppRo
 
     func goToTabBarScreen() -> some View {
         TabBarScreenView(
-            viewModel: TabBarScreenVM(
-                coordinator: TabBarScreenCoordinator(
-                    parent: self
-                )
-            )
+            viewModel: viewModelProvider.perform(&tabBarScreenVM) {
+                .init(coordinator: .init(parent: self))
+            }
         )
     }
 
     func goToNavigationScreen() -> some View {
         NavigationScreenView(
-            viewModel: NavigationScreenVM(
-                coordinator: NavigationScreenCoordinator(parent: self)
-            )
+            viewModel: viewModelProvider.perform(&navigationScreenVM) {
+                .init(coordinator: .init(parent: self))
+            }
         )
     }
 
     func goToModalsScreen() -> some View {
         ModalsScreenView(
-            viewModel: ModalsScreenVM(
-                coordinator: ModalsScreenCoordinator(parent: self)
-            )
+            viewModel: viewModelProvider.perform(&modalsScreenVM) {
+                .init(coordinator: .init(parent: self))
+            }
         )
     }
 }

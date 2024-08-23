@@ -18,5 +18,11 @@ open class TransmittingVM<
         self.coordinator = coordinator
 
         initiateTransmission(for: coordinator)
+
+        print("init: \(Self.self)")
+    }
+
+    deinit {
+        print("deinit: \(Self.self)")
     }
 }

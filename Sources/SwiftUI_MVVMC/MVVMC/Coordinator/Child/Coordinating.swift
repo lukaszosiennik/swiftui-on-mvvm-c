@@ -9,6 +9,8 @@ public protocol Coordinating: AnyObject, ObservableObject {
     associatedtype Coordinator: Coordinating
 
     var parent: Coordinator? { get }
+
+    var children: [Weak<Coordinator>] { get }
 }
 
 extension Coordinating {

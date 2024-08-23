@@ -10,14 +10,18 @@ where RouteID == NavigationScreenNavigationRouteID {}
 
 final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinating {
 
+    private weak var rootScreenVM: NavigationChildScreenVM<NavigationChildScreenCoordinator>?
+    private weak var childScreenVM: NavigationChildScreenVM<NavigationChildScreenCoordinator>?
+    private weak var templateScreenVM: TemplateScreenVM<TemplateScreenCoordinator>?
+
     @Published
     var pathRaw: NavigationPath = .init()
 
     func goToNavigationRoot() -> some View {
         NavigationChildScreenView(
-            viewModel: NavigationChildScreenVM(
-                coordinator: NavigationChildScreenCoordinator(parent: self)
-            ),
+            viewModel: viewModelProvider.perform(&rootScreenVM) {
+                .init(coordinator: .init(parent: self))
+            },
             params: .init(
                 number: 0
             )
@@ -37,9 +41,9 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinati
 
     func goToNavigationChildScreen() -> some View {
         NavigationChildScreenView(
-            viewModel: NavigationChildScreenVM(
-                coordinator: NavigationChildScreenCoordinator(parent: self)
-            ),
+            viewModel: viewModelProvider.perform(&childScreenVM) {
+                .init(coordinator: .init(parent: self))
+            },
             params: .init(
                 number: pathRaw.count
             )
@@ -48,9 +52,9 @@ final class NavigationScreenCoordinator: Coordinator, NavigationScreenCoordinati
 
     func goToTemplateScreen(with routeID: RouteID) -> some View {
         TemplateScreenView(
-            viewModel: TemplateScreenVM(
-                coordinator: TemplateScreenCoordinator(parent: self)
-            ),
+            viewModel: viewModelProvider.perform(&templateScreenVM) {
+                .init(coordinator: .init(parent: self))
+            },
             params: .init(forNavigation: routeID)
         )
     }

@@ -14,6 +14,11 @@ where RouteID == ModalsScreenModalRouteID {
 
 final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
 
+    private weak var sheetTemplateScreenVM: TemplateScreenVM<TemplateScreenCoordinator>?
+    private weak var fullScreenCoverTemplateScreenVM: TemplateScreenVM<TemplateScreenCoordinator>?
+    private weak var alertActionsScreenVM: AlertActionsScreenVM<AlertActionsScreenCoordinator>?
+    private weak var confirmationDialogActionsScreenVM: ConfirmationDialogActionsScreenVM<ConfirmationDialogActionsScreenCoordinator>?
+
     @Published
     var isSheetPresented: Bool = false
     @Published
@@ -53,35 +58,35 @@ final class ModalsScreenCoordinator: Coordinator, ModalsScreenCoordinating {
 
     func goToSheet() -> some View {
         TemplateScreenView(
-            viewModel: TemplateScreenVM(
-                coordinator: TemplateScreenCoordinator(parent: self)
-            ),
+            viewModel: viewModelProvider.perform(&sheetTemplateScreenVM) {
+                .init(coordinator: .init(parent: self))
+            },
             params: .init(forModal: .sheet)
         )
     }
 
     func goToFullScreenCover() -> some View {
         TemplateScreenView(
-            viewModel: TemplateScreenVM(
-                coordinator: TemplateScreenCoordinator(parent: self)
-            ),
+            viewModel: viewModelProvider.perform(&fullScreenCoverTemplateScreenVM) {
+                .init(coordinator: .init(parent: self))
+            },
             params: .init(forModal: .fullScreenCover)
         )
     }
 
     func goToAlert() -> some View {
         AlertActionsScreenView(
-            viewModel: AlertActionsScreenVM(
-                coordinator: AlertActionsScreenCoordinator(parent: self)
-            )
+            viewModel: viewModelProvider.perform(&alertActionsScreenVM) {
+                .init(coordinator: .init(parent: self))
+            }
         )
     }
 
     func goToConfirmationDialog() -> some View {
         ConfirmationDialogActionsScreenView(
-            viewModel: ConfirmationDialogActionsScreenVM(
-                coordinator: ConfirmationDialogActionsScreenCoordinator(parent: self)
-            )
+            viewModel: viewModelProvider.perform(&confirmationDialogActionsScreenVM) {
+                .init(coordinator: .init(parent: self))
+            }
         )
     }
 

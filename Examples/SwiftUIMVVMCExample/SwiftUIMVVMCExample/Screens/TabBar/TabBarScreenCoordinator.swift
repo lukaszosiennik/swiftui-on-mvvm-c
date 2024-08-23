@@ -14,12 +14,47 @@ where RouteID == TabBar.RouteID {
 
 final class TabBarScreenCoordinator: Coordinator, TabBarScreenCoordinating {
 
+    private weak var firstScreenVM: TemplateScreenVM<TemplateScreenCoordinator>?
+    private weak var secondScreenVM: TemplateScreenVM<TemplateScreenCoordinator>?
+    private weak var thirdScreenVM: TemplateScreenVM<TemplateScreenCoordinator>?
+
     func goToTabBar(routeID: TabBar.RouteID) -> some View {
+        Group {
+            switch routeID {
+            case .first:
+                goToFirstScreen()
+            case .second:
+                goToSecondScreen()
+            case .third:
+                goToThirdScreen()
+            }
+        }
+    }
+
+    func goToFirstScreen() -> some View {
         TemplateScreenView(
-            viewModel: TemplateScreenVM(
-                coordinator: TemplateScreenCoordinator(parent: self)
-            ),
-            params: .init(forTabBar: routeID)
+            viewModel: viewModelProvider.perform(&firstScreenVM) {
+                .init(coordinator: .init(parent: self))
+            },
+            params: .init(forTabBar: .first)
+        )
+    }
+
+    func goToSecondScreen() -> some View {
+        TemplateScreenView(
+            viewModel: viewModelProvider.perform(&secondScreenVM) {
+                .init(coordinator: .init(parent: self))
+            },
+            params: .init(forTabBar: .second)
+        )
+    }
+
+    func goToThirdScreen() -> some View {
+        TemplateScreenView(
+            viewModel: viewModelProvider.perform(&thirdScreenVM) {
+                .init(coordinator: .init(parent: self))
+            },
+            params: .init(forTabBar: .third)
         )
     }
 
